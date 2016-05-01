@@ -1,0 +1,20 @@
+.btn{
+  display: inline-block;
+  font-weight: 200;
+  box-sizing: border-box;
+  border: 1px solid color('gray',80);
+  color: color('gray',80);
+  padding: 8px 30px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  *{
+    vertical-align: middle;
+  }
+
+  &:hover{
+    background: rgba(color('gray',10),0.4);
+  }
+}

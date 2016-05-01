@@ -1,0 +1,235 @@
+/*
+##############################################################################
+# TYPOGRAPHY
+
+# Type Scale (Major Third)
+# base size 1em = 16px
+# EMS           Reg             Tiny           Small          Large
+# 2.441em   |   39.056px    |   29.292px   |   34.174px   |   43.938px
+# 1.953em   |   31.248px    |   23.436px   |   27.342px   |   35.154px
+# 1.563em   |   25.008px    |   18.756px   |   21.882px   |   28.134px
+# 1.25em    |   20px        |   15px       |   17.5px     |   22.5px
+# 1em       |   16px        |   12px       |   14px       |   18px
+# 0.8em     |   12.8px      |   9.6px      |   11.2px     |   14.4px
+# 0.64em    |   10.24px     |   7.68px     |   8.96px     |   11.52px
+# 0.512em   |   8.192px     |   6.144px    |   7.168px    |   9.216px
+
+# 1pt = 1.333333px
+# 1px = 0.75pt
+##############################################################################
+*/
+
+
+
+
+
+// /////////////////////////////////////////////////
+// FONTS
+// /////////////////////////////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,100,300,600,700);
+
+$roboto: 'Roboto', "helvetica neue", helvetica, arial, sans-serif;
+$josefin: 'Josefin Slab', serif;
+
+
+
+
+// /////////////////////////////////////////////////
+// FONT SETTINGS
+// /////////////////////////////////////////////////
+// Body
+body{
+  font-family: $roboto;
+  line-height: 1.625em;
+  letter-spacing: 0.0625em;
+  color: color('gray',95);
+}
+*{
+  font-family: $roboto;
+}
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  body{
+    font-size: 14px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 768px) {
+  body{
+    font-size: 16px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body{
+    font-size: 18px;
+  }
+}
+
+
+// Reset
+h1, h2, h3, h4, h5, h6, p, a{
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $josefin;
+  color: color('gray',85);
+}
+
+
+// Headings
+h1{
+  font-size: 2.441em;
+  line-height: 3.966625em;
+  letter-spacing: 0.1525625em;
+  font-weight: 100;
+}
+h2{
+  font-size: 1.953em;
+  line-height: 3.173625em;
+  letter-spacing: 0.1220625em;
+  font-weight: 100;
+}
+h3{
+  font-size: 1.563em;
+  line-height: 2.539875em;
+  letter-spacing: 0.0976875em;
+  font-weight: 300;
+}
+h4{
+  font-size: 1.25em;
+  line-height: 2.03125em;
+  letter-spacing: 0.078125em;
+  font-weight: 300;
+}
+h5{
+  font-size: 1em;
+  line-height: 1.625em;
+  letter-spacing: 0.0625em;
+  font-weight: 500;
+}
+h6{
+  font-size: 0.8em;
+  line-height: 1.3em;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+
+// Text elements
+p{
+  font-size: 1em;
+  line-height: 1.625em;
+  letter-spacing: 0.0625em;
+}
+
+
+// Anchor
+a, a:hover, a:active{
+  text-decoration: none;
+}
+
+
+
+// /////////////////////////////////////////////////
+// UTILITY CLASSES
+// /////////////////////////////////////////////////
+// Weight
+.weight-ultra-light{
+  font-weight: 100;
+}
+.weight-thin{
+  font-weight: 200;
+}
+.weight-light{
+  font-weight: 300;
+}
+.weight-regular{
+  font-weight: 400;
+}
+.weight-medium{
+  font-weight: 600;
+}
+.weight-bold{
+  font-weight: 700;
+}
+
+// Color
+.text-success{
+  color: color('green',40) !important;
+  &:before{
+    color: color('green',40) !important;
+  }
+}
+.text-warning{
+  color: color('yellow',30) !important;
+  &:before{
+    color: color('yellow',30) !important;
+  }
+}
+.text-danger{
+  color: color('red',40) !important;
+  &:before{
+    color: color('red',40) !important;
+  }
+}
+.text-info{
+  color: color('blue',40) !important;
+  &:before{
+    color: color('blue',40) !important;
+  }
+}
+.text-comment{
+  color: color('gray',40) !important;
+  &:before{
+    color: color('gray',40) !important;
+  }
+}
+
+// Font Sizes
+.font-size-1{
+  font-size: 2.441em;
+  letter-spacing: 0.1525625em;
+}
+.font-size-2{
+  font-size: 1.953em;
+  letter-spacing: 0.1220625em;
+}
+.font-size-3{
+  font-size: 1.563em;
+  letter-spacing: 0.0976875em;
+}
+.font-size-4{
+  font-size: 1.25em;
+  letter-spacing: 0.078125em;
+}
+.font-size-5{
+  font-size: 1em;
+  letter-spacing: 0.0625em;
+}
+.font-size-6{
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+.font-size-7{
+  font-size: 0.64em;
+  letter-spacing: 0.04em;
+}
+.font-size-8{
+  font-size: 0.512em;
+  letter-spacing: 0.032em;
+}
+
+
+// Text align
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}

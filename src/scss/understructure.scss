@@ -1,0 +1,74 @@
+//---------- COLORS ----------//
+@import "constants/color-palette";
+// use -> color('denim',50)
+
+@import "constants/social-colors";
+// use -> map-get($social-colors, github)
+
+@import "constants/ibm-colors";
+// use -> ibmColor('denim',50)
+
+$snow: #fffafa;
+
+
+
+//---------- FUNCTIONS ----------//
+
+
+
+
+
+//---------- ANIMATION ----------//
+@mixin keyframes($name){
+  @-webkit-keyframes $name{
+    @content;
+  }
+  @-moz-keyframes $name{
+    @content;
+  }
+  @-ms-keyframes $name{
+    @content;
+  }
+  @-o-keyframes $name{
+    @content;
+  }
+  @keyframes $name{
+    @content;
+  }
+}
+
+@include keyframes(spin-right){
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+//---------- IMPORTS ----------//
+// Constants
+@import "constants/grid";
+@import "constants/typography";
+@import "constants/utility";
+
+// Components
+@import "components/buttons";
+@import "components/side-nav";
+
+
+
+
+
+//---------- GENERAL STYLES ----------//
+body{
+  margin: 0;
+  overflow-x: hidden;
+  background: $snow;
+}
+
+table{
+  text-align: left;
+}
