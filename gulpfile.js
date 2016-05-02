@@ -111,4 +111,4 @@ gulp.task('default', ['scss','css','javascript'], function(){
   gulp.start('watch');
 });
 
-gulp.task('production', ['scss','css','javascript']);
+gulp.task('production', ['scssMain','css','javascript']);

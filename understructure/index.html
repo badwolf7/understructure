@@ -59,6 +59,10 @@
     }
     .page-header h1{
       line-height: 50px;
+      font-variant: small-caps;
+    }
+    .page-header h1:first-letter{
+      font-size: 1.2em;
     }
 
     .heading-samples{
@@ -77,8 +81,10 @@
 </head>
 <body>
   <header class="page-header">
-    <h1>Understructure</h1>
+    <h1 class="font-size-2">Understructure</h1>
   </header>
+
+
 
   <aside class="pull-left">
     <nav class="side-nav side-nav-fixed col-md-3 col-sm-8 col-xs-12">
@@ -102,6 +108,7 @@
                 <li><a class="page-link" href="#headings">Headings</a></li>
                 <li><a class="page-link" href="#copy">Copy</a></li>
                 <li><a class="page-link" href="#code">Code</a></li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -130,14 +137,14 @@
       <pre class="language-html"><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-&lt;head&gt;
-...
-&lt;link href="assets/css/understructure.css" rel="stylesheet" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-...
-&lt;script src="assets/js/understructure.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+  &lt;head&gt;
+    ...
+    &lt;link href="assets/css/understructure.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;script src="assets/js/understructure.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
       </code></pre>
     </section>
