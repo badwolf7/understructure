@@ -120,10 +120,10 @@
         </li>
 
         <li>
-          <a class="page-link" href="#javascript">JavaScript</a>
+          <a class="page-link tracker-link" href="#javascript">JavaScript</a>
           <ul>
-            <li><a class="page-link" href="#page-flow">Page Flow</a></li>
-            <li><a class="tracker" href="#page-flow">Tracker</a></li>
+            <li><a class="page-link tracker-link" href="#page-flow">Page Flow</a></li>
+            <li><a class="page-link tracker-link" href="#tracker">Tracker</a></li>
           </ul>
         </li>
     </nav>
@@ -280,12 +280,40 @@
         <header>
           <h2>Page Flow</h2>
         </header>
+
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre class="language-html"><code>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a class="page-link" href="#page-flow"&gt;Page Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </section>
       </article>
 
       <article id="tracker" class="tracker-section">
         <header>
           <h2>Tracker</h2>
         </header>
+
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre class="language-html"><code>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class="tracker-link" href="#page-flow"&gt;Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+&lt;article id="tracker" class="tracker-section"&gt;&lt;/article&gt;
+          </code></pre>
+        </section>
       </article>
     </section>
   </main>
