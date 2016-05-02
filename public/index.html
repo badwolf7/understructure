@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta -->
+  <title>Virgil</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/prism.css">
+  <link rel="stylesheet" href="./assets/css/virgil.css">
+
+  <style>
+    #grid-display .row div{
+      box-shadow: inset 0 0 0 1px #584b54;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      max-height: 109px;
+      position: relative;
+    }
+    #grid-display .row div:before{
+      content: "";
+      height: 100%;
+      width: 0.5em;
+      background: rgba(168,222,166,0.65);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    #grid-display .row div:after{
+      content: "";
+      height: 100%;
+      width: 0.5em;
+      background: rgba(168,222,166,0.65);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    article{
+      clear: both;
+    }
+    section{
+      clear: both;
+      margin-bottom: 50px;
+    }
+    main > section > header h1{
+      background: #ece9eb;
+      border-bottom: 4px solid #65c2a7;
+      margin-bottom: 13px;
+      padding-left: 2%;
+      line-height: 2.539875em;
+    }
+
+    .page-header{
+      height: 50px;
+      padding: 0 2%;
+      box-shadow: 0 1px 5px 0 rgba(66,56,63,0.4);
+      margin-bottom: 25px;
+      background: #272822;
+      color: #c5e8de;
+    }
+    .page-header h1{
+      line-height: 50px;
+      color: #c5e8de;
+    }
+    .page-header h1:first-letter{
+      font-size: 1.2em;
+    }
+
+    .heading-samples{
+      box-shadow: 0 0 0 1px #8ad0bd;
+    }
+    .heading-sample{
+      border-bottom: 1px solid #8ad0bd;
+    }
+    .heading-sample:last-child{
+      border: none;
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="font-size-2 weight-300">Virgil</h1>
+  </header>
+
+
+
+  <aside class="pull-left">
+    <nav class="side-nav side-nav-fixed col-md-3 col-sm-8 col-xs-12">
+      <ul class="tracker">
+        <li>
+          <a class="page-link tracker-link" href="#basic-usage">Basic Usage</a>
+        </li>
+
+        <li>
+          <a class="page-link tracker-link" href="#css">CSS</a>
+          <ul>
+            <li>
+              <a class="page-link tracker-link" href="#grid">Grid</a>
+              <ul>
+                <li><a class="page-link tracker-link" href="#grid-display">Grid Display</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="page-link tracker-link" href="#typography">Typography</a>
+              <ul>
+                <li><a class="page-link tracker-link" href="#headings">Headings</a></li>
+                <li><a class="page-link tracker-link" href="#copy">Copy</a></li>
+                <li><a class="page-link tracker-link" href="#code">Code</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="page-link tracker-link" href="#javascript">JavaScript</a>
+          <ul>
+            <li><a class="page-link tracker-link" href="#page-flow">Page Flow</a></li>
+            <li><a class="page-link tracker-link" href="#tracker">Tracker</a></li>
+          </ul>
+        </li>
+    </nav>
+  </aside>
+
+
+
+
+  <main class="pull-left col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
+    <section id="basic-usage" class="tracker-section">
+      <header>
+        <h1>Basic Usage</h1>
+      </header>
+
+      <p>You will need to include the <code class="language-none">virgil.css</code> and <code class="language-none">virgil.js</code> files in your page.</p>
+      <p><strong>Example:</strong></p>
+
+      <pre class="language-html"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+    &lt;link href="assets/css/virgil.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    &lt;script src="assets/js/virgil.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+    </section>
+
+    <section id="css" class="tracker-section">
+      <header>
+        <h1>CSS</h1>
+      </header>
+
+      <article id="grid" class="tracker-section">
+        <header>
+          <h2>Grid</h2>
+        </header>
+
+        <section id="grid-display" class="tracker-section">
+          <div class="row">
+            <div class="col-xs-6 pull-left">6</div>
+            <div class="col-xs-6 pull-left">6</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-5 pull-left">5</div>
+            <div class="col-xs-7 pull-left">7</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4 pull-left">4</div>
+            <div class="col-xs-8 pull-left">8</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3 pull-left">3</div>
+            <div class="col-xs-9 pull-left">9</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2 pull-left">2</div>
+            <div class="col-xs-10 pull-left">10</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-1 pull-left">1</div>
+            <div class="col-xs-11 pull-left">11</div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 pull-left">12</div>
+          </div>
+        </section>
+      </article>
+
+
+
+      <article id="typography" class="tracker-section">
+        <header>
+          <h2>Typography</h2>
+        </header>
+
+        <section id="headings" class="tracker-section">
+          <h3>Headings</h3>
+          <div class="heading-samples">
+            <h1 class="heading-sample">h1 Heading</h1>
+            <h2 class="heading-sample">h2 Heading</h2>
+            <h3 class="heading-sample">h3 Heading</h3>
+            <h4 class="heading-sample">h4 Heading</h4>
+            <h5 class="heading-sample">h5 Heading</h5>
+            <h6 class="heading-sample">h6 Heading</h6>
+          </div>
+        </section>
+
+        <section id="copy" class="tracker-section">
+          <h3>Body Copy</h3>
+          <p>No, no there you go, no there you go. I just heard it come on.Nicer ambulances, faster response times and better looking drivers mean they're not just the Emergency Services, they're your Emergency Services.No, no there you go, no there you go. I just heard it come on.No, no, that's the music you heard when it come on.You know, it's high tide. But we're not on the coast. I'm closed for maintenance! Closed for maintenance? I've fallen to the communists! Well, they do have some strong arguments.I'll put this over here, with the rest of the fire.</p>
+
+          <p>I'm a 32 year old IT-man who works in a basement. Yes, I do the whole Lonely Hearts thing!OK. Moss, what did you have for breakfast this morning? Smarties cereal.I mean, they have no respect for us up there! No respect whatsoever! We're all just drudgeons to them!You mean 999. Yes, yes, I mean 999! Yeah, I know. That's the American one, you berk!If anyone was ever rude to me, I used to carry their food around in my trousers. Oh my God! Before you brought it to their table? No, after! Of course, before! Why would I do it after?Hello? I've had a bit of a tumble.</p>
+        </section>
+
+        <section id="code" class="tracker-section">
+          <h3>Code</h3>
+          <p>Your <code class="language-markdown">code</code> can be inline or displayed as a block.</p>
+
+          <h4>Inline Code</h4>
+          <code class="language-html">
+            &lt;header&gt;
+              &lt;h1&gt;Typography&lt;/h1&gt;
+            &lt;/header&gt;
+          </code>
+
+          <h4>Code Block</h4>
+          <pre class="language-js"><code>
+  var pass = 50;   // Pass mark
+  var score = 90;  // Score
+
+  // Check if the user has passed
+  var hasPassed = score >= pass;
+
+  // Write the message into the page
+  var el = document.getElementById('answer');
+  el.innerHTML = 'Level passed: ' + hasPassed;
+          </code></pre>
+
+          <h4>Basic Usage</h4>
+
+          <p>Classes only work with <code class="language-html">&lt;code&gt;</code> elements, since marking up code without a <code class="language-html">&lt;code&gt;</code> element is semantically invalid. According to the HTML5 spec, the recommended way to define a code language is a <code class="language-none">language-xxxx</code> class, which is what Prism uses. To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple <code class="language-html">&lt;code&gt;</code> elements have the same language, you can add the <code class="language-none">language-xxxx</code> class on one of their common ancestors. This way, you can also define a document-wide default language, by adding a <code class="language-none">language-xxxx</code> class on the <code class="language-html">&lt;body&gt;</code> or <code class="language-html">&lt;html&gt;</code> element.</p>
+
+          <p>If you want to opt-out of highlighting for a <code class="language-html">&lt;code&gt;</code> element that is a descendant of an element with a declared code language, you can add the class <code class="language-none">language-none</code> to it (or any non-existing language, really).</p>
+
+          <p>The recommended way to mark up a code block is a <code class="language-html">&lt;pre&gt;</code> element with a <code class="language-html">&lt;code&gt;</code> element inside, like so:</p>
+
+          <pre><code class="language-html">
+  &lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;
+          </code></pre>
+
+          <p>If you use that pattern, the <code class="language-html">&lt;pre&gt;</code> will automatically get the <code class="language-none">language-xxxx</code> class (if it doesn’t already have it) and will be styled as a code block.</p>
+        </section>
+      </article>
+    </section>
+
+
+    <section id="javascript" class="tracker-section">
+      <header>
+        <h1>JavaScript</h1>
+      </header>
+
+      <article id="page-flow" class="tracker-section">
+        <header>
+          <h2>Page Flow</h2>
+        </header>
+
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre class="language-html"><code>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a class="page-link" href="#page-flow"&gt;Page Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </section>
+      </article>
+
+      <article id="tracker" class="tracker-section">
+        <header>
+          <h2>Tracker</h2>
+        </header>
+
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre class="language-html"><code>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class="tracker-link" href="#page-flow"&gt;Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+&lt;article id="tracker" class="tracker-section"&gt;&lt;/article&gt;
+          </code></pre>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <!-- Underscore.js -->
+  <script src="./assets/js/virgil.js"></script>
+</body>
+</html>
