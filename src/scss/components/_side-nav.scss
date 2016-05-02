@@ -54,7 +54,7 @@
           transition: width 0.4s ease, opacity 0.6s ease;
         }
 
-        &:hover{
+        &:hover, &.tracker-current{
           &:before{
             background: color('aqua', 60);
             height: 39px;

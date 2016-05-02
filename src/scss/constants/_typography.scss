@@ -90,31 +90,31 @@ h2{
   font-size: 1.953em;
   line-height: 3.173625em;
   letter-spacing: 0.1220625em;
-  font-weight: 100;
+  font-weight: 300;
 }
 h3{
   font-size: 1.563em;
   line-height: 2.539875em;
   letter-spacing: 0.0976875em;
-  font-weight: 300;
+  font-weight: 400;
 }
 h4{
   font-size: 1.25em;
   line-height: 2.03125em;
   letter-spacing: 0.078125em;
-  font-weight: 300;
+  font-weight: 400;
 }
 h5{
   font-size: 1em;
   line-height: 1.625em;
   letter-spacing: 0.0625em;
-  font-weight: 500;
+  font-weight: 600;
 }
 h6{
   font-size: 0.8em;
   line-height: 1.3em;
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 
@@ -138,23 +138,32 @@ a, a:hover, a:active{
 // UTILITY CLASSES
 // /////////////////////////////////////////////////
 // Weight
-.weight-ultra-light{
+.weight-100{
   font-weight: 100;
 }
-.weight-thin{
+.weight-200{
   font-weight: 200;
 }
-.weight-light{
+.weight-300{
   font-weight: 300;
 }
-.weight-regular{
+.weight-400{
   font-weight: 400;
 }
-.weight-medium{
+.weight-500{
+  font-weight: 500;
+}
+.weight-600{
   font-weight: 600;
 }
-.weight-bold{
+.weight-700{
   font-weight: 700;
+}
+.weight-800{
+  font-weight: 800;
+}
+.weight-900{
+  font-weight: 900;
 }
 
 // Color

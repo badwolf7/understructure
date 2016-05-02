@@ -40,15 +40,18 @@
       z-index: -1;
     }
 
-    main h1:first-of-type{
-      line-height: 2.539875em;
-    }
-
     article{
       clear: both;
     }
     article section{
       margin-bottom: 50px;
+    }
+    main > section > header h1{
+      background: #ece9eb;
+      border-bottom: 4px solid #65c2a7;
+      margin-bottom: 13px;
+      padding-left: 2%;
+      line-height: 2.539875em;
     }
 
     .page-header{
@@ -56,10 +59,13 @@
       padding: 0 2%;
       box-shadow: 0 1px 5px 0 rgba(66,56,63,0.4);
       margin-bottom: 25px;
+      background: #272822;
+      color: #c5e8de;
     }
     .page-header h1{
       line-height: 50px;
       font-variant: small-caps;
+      color: #c5e8de;
     }
     .page-header h1:first-letter{
       font-size: 1.2em;
@@ -81,33 +87,33 @@
 </head>
 <body>
   <header class="page-header">
-    <h1 class="font-size-2">Understructure</h1>
+    <h1 class="font-size-2 weight-300">Understructure</h1>
   </header>
 
 
 
   <aside class="pull-left">
     <nav class="side-nav side-nav-fixed col-md-3 col-sm-8 col-xs-12">
-      <ul>
+      <ul class="tracker">
         <li>
-          <a class="page-link" href="#basic-usage">Basic Usage</a>
+          <a class="page-link tracker-link" href="#basic-usage">Basic Usage</a>
         </li>
 
         <li>
-          <a class="page-link" href="#css">CSS</a>
+          <a class="page-link tracker-link" href="#css">CSS</a>
           <ul>
             <li>
-              <a class="page-link" href="#grid">Grid</a>
+              <a class="page-link tracker-link" href="#grid">Grid</a>
               <ul>
-                <li><a class="page-link" href="#grid-display">Grid Display</a></li>
+                <li><a class="page-link tracker-link" href="#grid-display">Grid Display</a></li>
               </ul>
             </li>
             <li>
-              <a class="page-link" href="#typography">Typography</a>
+              <a class="page-link tracker-link" href="#typography">Typography</a>
               <ul>
-                <li><a class="page-link" href="#headings">Headings</a></li>
-                <li><a class="page-link" href="#copy">Copy</a></li>
-                <li><a class="page-link" href="#code">Code</a></li>
+                <li><a class="page-link tracker-link" href="#headings">Headings</a></li>
+                <li><a class="page-link tracker-link" href="#copy">Copy</a></li>
+                <li><a class="page-link tracker-link" href="#code">Code</a></li>
               </ul>
             </li>
           </ul>
@@ -126,9 +132,9 @@
 
 
   <main class="pull-left col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12">
-    <section id="basic-usage">
+    <section id="basic-usage" class="tracker-section">
       <header>
-        <h2>Basic Usage</h2>
+        <h1>Basic Usage</h1>
       </header>
 
       <p>You will need to include the <code class="language-none">understructure.css</code> and <code class="language-none">understructure.js</code> files in your page.</p>
@@ -149,17 +155,17 @@
       </code></pre>
     </section>
 
-    <section id="css">
+    <section id="css" class="tracker-section">
       <header>
         <h1>CSS</h1>
       </header>
 
-      <article id="grid">
+      <article id="grid" class="tracker-section">
         <header>
           <h2>Grid</h2>
         </header>
 
-        <section id="grid-display">
+        <section id="grid-display" class="tracker-section">
           <div class="row">
             <div class="col-xs-6 pull-left"><code class="language-none">col-xs-6</code></div>
             <div class="col-xs-6 pull-left"><code class="language-none">col-xs-6</code></div>
@@ -198,12 +204,12 @@
 
 
 
-      <article id="typography">
+      <article id="typography" class="tracker-section">
         <header>
           <h2>Typography</h2>
         </header>
 
-        <section id="headings">
+        <section id="headings" class="tracker-section">
           <h3>Headings</h3>
           <div class="heading-samples">
             <h1 class="heading-sample">h1 Heading</h1>
@@ -215,14 +221,14 @@
           </div>
         </section>
 
-        <section id="copy">
+        <section id="copy" class="tracker-section">
           <h3>Body Copy</h3>
           <p>No, no there you go, no there you go. I just heard it come on.Nicer ambulances, faster response times and better looking drivers mean they're not just the Emergency Services, they're your Emergency Services.No, no there you go, no there you go. I just heard it come on.No, no, that's the music you heard when it come on.You know, it's high tide. But we're not on the coast. I'm closed for maintenance! Closed for maintenance? I've fallen to the communists! Well, they do have some strong arguments.I'll put this over here, with the rest of the fire.</p>
 
           <p>I'm a 32 year old IT-man who works in a basement. Yes, I do the whole Lonely Hearts thing!OK. Moss, what did you have for breakfast this morning? Smarties cereal.I mean, they have no respect for us up there! No respect whatsoever! We're all just drudgeons to them!You mean 999. Yes, yes, I mean 999! Yeah, I know. That's the American one, you berk!If anyone was ever rude to me, I used to carry their food around in my trousers. Oh my God! Before you brought it to their table? No, after! Of course, before! Why would I do it after?Hello? I've had a bit of a tumble.</p>
         </section>
 
-        <section id="code">
+        <section id="code" class="tracker-section">
           <h3>Code</h3>
           <p>Your <code class="language-markdown">code</code> can be inline or displayed as a block.</p>
 
@@ -264,12 +270,12 @@
     </section>
 
 
-    <section id="javascript">
+    <section id="javascript" class="tracker-section">
       <header>
         <h1>JavaScript</h1>
       </header>
 
-      <article id="page-flow">
+      <article id="page-flow" class="tracker-section">
         <header>
           <h2>Page Flow</h2>
         </header>
