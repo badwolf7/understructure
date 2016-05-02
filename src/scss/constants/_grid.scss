@@ -11,7 +11,7 @@
   @for $i from 1 through 12{
     .col-xxs-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -57,7 +57,7 @@
   @for $i from 1 through 12{
     .col-xs-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -109,7 +109,7 @@
   @for $i from 1 through 12{
     .col-sm-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -160,7 +160,7 @@
   @for $i from 1 through 12{
     .col-md-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -211,7 +211,7 @@
   @for $i from 1 through 12{
     .col-lg-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -262,7 +262,7 @@
   @for $i from 1 through 12{
     .col-xl-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }
@@ -313,7 +313,7 @@
   @for $i from 1 through 12{
     .col-xxl-#{$i}{
       width: calc((100% * (#{$i} / 12)));
-      padding: 0 0.5%;
+      padding: 0 0.5em;
       box-sizing: border-box;
     }
   }

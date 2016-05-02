@@ -32,7 +32,9 @@
     "url": "https://github.ibm.com/hspringsteen/understructure"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "master": "git push public master & git push ghe master",
+    "gh-pages": "git push public gh-pages & git push ghe gh-pages"
   },
   "engines": {
     "node": "4.2.x"
