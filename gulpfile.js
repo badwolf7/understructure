@@ -30,12 +30,12 @@ var dirs = {
     js: "./src/js/**/*.js",
     scss: {
       all: "./src/scss/**/*.scss",
-      main: "./src/scss/understructure.scss"
+      main: "./src/scss/virgil.scss"
     }
   },
-  understructure: {
-    css: "./understructure/assets/css",
-    js: "./understructure/assets/js"
+  public: {
+    css: "./public/assets/css",
+    js: "./public/assets/js"
   }
 }
 
@@ -46,10 +46,10 @@ var dirs = {
 gulp.task('scssMain', function(){
   gulp.src(dirs.src.scss.main)
     .pipe(sourcemaps.init())
-      .pipe(changed(dirs.understructure.css))
+      .pipe(changed(dirs.public.css))
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dirs.understructure.css))
+    .pipe(gulp.dest(dirs.public.css))
     .pipe(livereload())
 });
 
@@ -65,12 +65,12 @@ gulp.task('scss', ['scssMain'], function(){
 gulp.task('css', function(){
   return gulp.src(dirs.src.css)
     .pipe(sourcemaps.init())
-      .pipe(changed(dirs.understructure.css))
+      .pipe(changed(dirs.public.css))
       .pipe(minifyCss({
         compatibility: 'ie7'
       }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dirs.understructure.css))
+    .pipe(gulp.dest(dirs.public.css))
     .pipe(livereload())
     .pipe(next(function(){
       console.log('\n Finished CSS'.bgGreen.black.bold);
@@ -81,13 +81,13 @@ gulp.task('css', function(){
 gulp.task('javascript', function(){
   return gulp.src(dirs.src.js)
     .pipe(sourcemaps.init())
-      .pipe(changed(dirs.understructure.js))
+      .pipe(changed(dirs.public.js))
       .pipe(jshint())
       .pipe(jshint.reporter(stylish))
       .pipe(uglify())
-      .pipe(concat('understructure.js'))
+      .pipe(concat('virgil.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(dirs.understructure.js))
+    .pipe(gulp.dest(dirs.public.js))
     .pipe(livereload())
     .pipe(next(function(){
       console.log('\n Finished JavaScript'.bgGreen.black.bold);
