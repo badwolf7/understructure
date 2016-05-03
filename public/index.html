@@ -92,6 +92,8 @@
 
 
 
+
+
   <aside class="pull-left">
     <nav class="side-nav side-nav-fixed col-md-3 col-sm-8 col-xs-12">
       <ul class="tracker">
@@ -113,15 +115,17 @@
               <ul>
                 <li><a class="page-link tracker-link" href="#headings">Headings</a></li>
                 <li><a class="page-link tracker-link" href="#copy">Copy</a></li>
-                <li><a class="page-link tracker-link" href="#code">Code</a></li>
               </ul>
             </li>
-            <li>
-              <a class="page-link tracker-link" href="#components">Components</a>
-              <ul>
-                <li><a class="page-link tracker-link" href="#buttons">Buttons</a></li>
-              </ul>
-            </li>
+
+            <li><a class="page-link tracker-link" href="#code">Code</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="page-link tracker-link" href="#components">Components</a>
+          <ul>
+            <li><a class="page-link tracker-link" href="#buttons">Buttons</a></li>
           </ul>
         </li>
 
@@ -132,8 +136,13 @@
             <li><a class="page-link tracker-link" href="#tracker">Tracker</a></li>
           </ul>
         </li>
+
+        <li>
+          <a class="page-link tracker-link" href="#swatch-book">Colors</a>
+        </li>
     </nav>
   </aside>
+
 
 
 
@@ -161,6 +170,10 @@
 &lt;/html&gt;
       </code></pre>
     </section>
+
+
+
+
 
     <section id="css" class="tracker-section">
       <header>
@@ -236,34 +249,36 @@
 
           <p>I'm a 32 year old IT-man who works in a basement. Yes, I do the whole Lonely Hearts thing!OK. Moss, what did you have for breakfast this morning? Smarties cereal.I mean, they have no respect for us up there! No respect whatsoever! We're all just drudgeons to them!You mean 999. Yes, yes, I mean 999! Yeah, I know. That's the American one, you berk!If anyone was ever rude to me, I used to carry their food around in my trousers. Oh my God! Before you brought it to their table? No, after! Of course, before! Why would I do it after?Hello? I've had a bit of a tumble.</p>
         </section>
+      </article>
 
-        <section id="code" class="tracker-section">
-          <header>
-            <h3>Code</h3>
-          </header>
-          <p>Your <code class="language-markdown">code</code> can be inline or displayed as a block.</p>
+      <article id="code" class="tracker-section">
+        <header>
+          <h2>Code</h2>
+        </header>
+        <p>Your <code class="language-markdown">code</code> can be inline or displayed as a block.</p>
 
-          <h4>Inline Code</h4>
-          <code class="language-html">
-            &lt;header&gt;
-              &lt;h1&gt;Typography&lt;/h1&gt;
-            &lt;/header&gt;
-          </code>
+        <h3>Inline Code</h3>
+        <code class="language-html">
+          &lt;header&gt;
+            &lt;h1&gt;Typography&lt;/h1&gt;
+          &lt;/header&gt;
+        </code>
 
-          <h4>Code Block</h4>
-          <pre class="language-js"><code>
-  var pass = 50;   // Pass mark
-  var score = 90;  // Score
+        <h3>Code Block</h3>
+        <pre class="language-js"><code>
+var pass = 50;   // Pass mark
+var score = 90;  // Score
 
-  // Check if the user has passed
-  var hasPassed = score >= pass;
+// Check if the user has passed
+var hasPassed = score >= pass;
 
-  // Write the message into the page
-  var el = document.getElementById('answer');
-  el.innerHTML = 'Level passed: ' + hasPassed;
-          </code></pre>
+// Write the message into the page
+var el = document.getElementById('answer');
+el.innerHTML = 'Level passed: ' + hasPassed;
+        </code></pre>
 
-          <h4>Basic Usage</h4>
+        <section>
+          <h3>Basic Usage</h3>
 
           <p>Classes only work with <code class="language-html">&lt;code&gt;</code> elements, since marking up code without a <code class="language-html">&lt;code&gt;</code> element is semantically invalid. According to the HTML5 spec, the recommended way to define a code language is a <code class="language-none">language-xxxx</code> class, which is what Prism uses. To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple <code class="language-html">&lt;code&gt;</code> elements have the same language, you can add the <code class="language-none">language-xxxx</code> class on one of their common ancestors. This way, you can also define a document-wide default language, by adding a <code class="language-none">language-xxxx</code> class on the <code class="language-html">&lt;body&gt;</code> or <code class="language-html">&lt;html&gt;</code> element.</p>
 
@@ -278,21 +293,58 @@
           <p>If you use that pattern, the <code class="language-html">&lt;pre&gt;</code> will automatically get the <code class="language-none">language-xxxx</code> class (if it doesn’t already have it) and will be styled as a code block.</p>
         </section>
       </article>
+    </section>
 
-      <article id="components" class="tracker-section">
+
+
+
+
+    <section id="components" class="tracker-section">
+      <header>
+        <h1>Components</h1>
+      </header>
+
+      <article id="buttons" class="tracker-section">
         <header>
-          <h2>Components</h2>
+          <h2>Buttons</h2>
         </header>
 
-        <section id="buttons" class="tracker-section">
-          <header>
-            <h3>Buttons</h3>
-          </header>
+        <section class="flexbox">
+          <div class="col-xs-2 col-sm-4">
+            <h3>Default</h3>
+            <button class="btn">Submit</button>
+          </div>
 
-          <button class="btn">Submit</button>
+          <div class="col-xs-2 col-sm-4">
+            <h3>Success</h3>
+            <button class="btn btn-success">Submit</button>
+          </div>
+
+          <div class="col-xs-2 col-sm-4">
+            <h3>Warning</h3>
+            <button class="btn btn-warning">Submit</button>
+          </div>
+
+          <div class="col-xs-2 col-sm-4">
+            <h3>Danger</h3>
+            <button class="btn btn-danger">Submit</button>
+          </div>
+
+          <div class="col-xs-2 col-sm-4">
+            <h3>Info</h3>
+            <button class="btn btn-info">Submit</button>
+          </div>
+
+          <div class="col-xs-2 col-sm-4">
+            <h3>Submit</h3>
+            <button class="btn btn-comment">Submit</button>
+          </div>
         </section>
       </article>
     </section>
+
+
+
 
 
     <section id="javascript" class="tracker-section">
@@ -339,6 +391,29 @@
           </code></pre>
         </section>
       </article>
+    </section>
+
+
+
+
+
+    <section id="swatch-book" class="tracker-section">
+      <header>
+        <h1>Colors</h1>
+      </header>
+
+      <ul class="swatch-book flexbox"></ul>
+      <script>
+        var colors = ['red','brown','orange','yellow','olive','yellow-green','green','aqua','teal','blue','denim','purple','magenta','pink','metal','gray'];
+
+        for(var color in colors){
+          $('.swatch-book').append('<li class="color-'+colors[color]+'"><ul></ul><p>'+colors[color]+'</p></li>')
+
+          for(var i=5;i<=100;i+=5){
+            $('.swatch-book .color-'+colors[color]+' ul').append('<li class="color-val-'+i+'"></li>');
+          }
+        }
+      </script>
     </section>
   </main>
 

@@ -2,10 +2,12 @@
   display: inline-block;
   font-weight: 200;
   box-sizing: border-box;
-  border: 1px solid color('gray',80);
+  border: 2px solid color('gray',80);
   color: color('gray',80);
+  background: none;
   padding: 8px 30px;
   text-align: center;
+  font-size: 1em;
   vertical-align: middle;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
@@ -13,6 +15,54 @@
   *{
     vertical-align: middle;
   }
+
+  &:hover{
+    background: rgba(color('gray',10),0.4);
+  }
+}
+
+
+
+
+.btn-success{
+  border: 2px solid $success;
+  color: color('green',80);
+
+  &:hover{
+    background: rgba(color('green',10),0.4);
+  }
+}
+
+.btn-warning{
+  border: 2px solid $warning;
+  color: color('yellow',80);
+
+  &:hover{
+    background: rgba(color('yellow',10),0.4);
+  }
+}
+
+.btn-danger{
+  border: 2px solid $danger;
+  color: color('red',80);
+
+  &:hover{
+    background: rgba(color('red',10),0.4);
+  }
+}
+
+.btn-info{
+  border: 2px solid $info;
+  color: color('blue',80);
+
+  &:hover{
+    background: rgba(color('blue',10),0.4);
+  }
+}
+
+.btn-comment{
+  border: 2px solid $comment;
+  color: color('gray',80);
 
   &:hover{
     background: rgba(color('gray',10),0.4);

@@ -14,6 +14,12 @@
 
 $snow: #fffafa;
 
+$success: color('green',40);
+$warning: color('yellow',30);
+$danger: color('red',40);
+$info: color('blue',40);
+$comment: color('gray',40);
+
 
 
 //---------- FUNCTIONS ----------//
@@ -55,11 +61,13 @@ $snow: #fffafa;
 //---------- IMPORTS ----------//
 // Constants
 @import "constants/grid";
+@import "constants/flexbox";
 @import "constants/typography";
 @import "constants/utility";
 
 // Components
 @import "components/buttons";
+@import "components/color-grid";
 @import "components/side-nav";
 
 

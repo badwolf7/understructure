@@ -168,33 +168,33 @@ a, a:hover, a:active{
 
 // Color
 .text-success{
-  color: color('green',40) !important;
+  color: $success !important;
   &:before{
-    color: color('green',40) !important;
+    color: $success !important;
   }
 }
 .text-warning{
-  color: color('yellow',30) !important;
+  color: $warning !important;
   &:before{
-    color: color('yellow',30) !important;
+    color: $warning !important;
   }
 }
 .text-danger{
-  color: color('red',40) !important;
+  color: $danger !important;
   &:before{
-    color: color('red',40) !important;
+    color: $danger !important;
   }
 }
 .text-info{
-  color: color('blue',40) !important;
+  color: $info !important;
   &:before{
-    color: color('blue',40) !important;
+    color: $info !important;
   }
 }
 .text-comment{
-  color: color('gray',40) !important;
+  color: $comment !important;
   &:before{
-    color: color('gray',40) !important;
+    color: $comment !important;
   }
 }
 
