@@ -63,10 +63,10 @@ $comment: color('gray',40);
 @import "colors/patterns";
 
 // Constants
+@import "constants/typography";
 @import "constants/code";
 @import "constants/grid";
 @import "constants/flexbox";
-@import "constants/typography";
 @import "constants/utility";
 
 // Components

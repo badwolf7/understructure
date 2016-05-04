@@ -20,7 +20,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: $snow;
 	text-shadow: 0 1px rgba($code-bg, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: $mono;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
