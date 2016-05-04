@@ -6,10 +6,20 @@
  */
 
 
+$code-gray: slategray;
+$code-pink: #f92672;
+$code-purple: #ae81ff;
+$code-green: #a6e22e;
+$code-yellow: #e6db74;
+$code-light-blue: #66d9ef;
+$code-orange: #fd971f;
+$code-bg: color('metal',90);
+
+
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f2;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: $snow;
+	text-shadow: 0 1px rgba($code-bg, 0.3);
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	direction: ltr;
 	text-align: left;
@@ -38,7 +48,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #272822;
+	background: $code-bg;
 }
 
 /* Inline code */
@@ -51,11 +61,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: $code-gray;
 }
 
 .token.punctuation {
-	color: #f8f8f2;
+	color: $snow;
 }
 
 .namespace {
@@ -67,12 +77,12 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	color: $code-pink;
 }
 
 .token.boolean,
 .token.number {
-	color: #ae81ff;
+	color: $code-purple;
 }
 
 .token.selector,
@@ -81,7 +91,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #a6e22e;
+	color: $code-green;
 }
 
 .token.operator,
@@ -90,22 +100,22 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+	color: $snow;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function {
-	color: #e6db74;
+	color: $code-yellow;
 }
 
 .token.keyword {
-	color: #66d9ef;
+	color: $code-light-blue;
 }
 
 .token.regex,
 .token.important {
-	color: #fd971f;
+	color: $code-orange;
 }
 
 .token.important,
@@ -234,12 +244,12 @@ div.prism-show-language > div.prism-show-language-label {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	border: 5px solid #fff;
-	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
-	-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
-	-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+	border: 5px solid $snow;
+	-webkit-box-shadow: 0 0 3px rgba($code-bg, 0.5) inset, 0 0 10px rgba($code-bg, 0.75);
+	-moz-box-shadow: 0 0 3px rgba($code-bg, 0.5) inset, 0 0 10px rgba($code-bg, 0.75);
+	-ms-box-shadow: 0 0 3px rgba($code-bg, 0.5) inset, 0 0 10px rgba($code-bg, 0.75);
+	-o-box-shadow: 0 0 3px rgba($code-bg, 0.5) inset, 0 0 10px rgba($code-bg, 0.75);
+	box-shadow: 0 0 3px rgba($code-bg, 0.5) inset, 0 0 10px rgba($code-bg, 0.75);
 }
 
 .prism-previewer:after {
@@ -249,7 +259,7 @@ div.prism-show-language > div.prism-show-language-label {
 	margin: 5px 0 0 -7px;
 	border: 7px solid transparent;
 	border-color: rgba(255, 0, 0, 0);
-	border-top-color: #fff;
+	border-top-color: $snow;
 }
 .prism-previewer.flipped:after {
 	top: auto;
@@ -257,7 +267,7 @@ div.prism-show-language > div.prism-show-language-label {
 	margin-top: 0;
 	margin-bottom: 5px;
 	border-top-color: rgba(255, 0, 0, 0);
-	border-bottom-color: #fff;
+	border-bottom-color: $snow;
 }
 .prism-previewer.active {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)";
