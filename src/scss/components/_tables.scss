@@ -9,7 +9,7 @@ table{
     td,
     tr{
       display: block;
-      trborder: 1px solid rgba(color('gray',90),0.2);
+      trborder: 1px solid color('gray',20);
     }
 
     // Hide table headers (but not display: none, for accessibility)
@@ -22,19 +22,26 @@ table{
     td{
       // Behave  like a "row"
       border: none !important;
-      border-bottom: 1px solid rgba(color('gray',90),0.2) !important;
       position: relative !important;
-      padding-left: 50% !important;
+      padding-left: 35% !important;
+
+      &:last-child{
+        border-bottom: 1px solid color('gray',10) !important;
+      }
 
       &:before{
         // Now like a table header
         position: absolute !important;
         // Top/left values mimic padding
-        top: 7px !important;
+        top: 17px !important;
         left: 2% !important;
-        width: 45% !important;
+        width: 30% !important;
         padding-right: 10px !important;
         white-space: nowrap !important;
+      }
+
+      &:first-child:before{
+        top: 29px !important;
       }
     }
   }

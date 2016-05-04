@@ -3,13 +3,13 @@
 
 
 //---------- COLORS ----------//
-@import "constants/color-palette";
+@import "colors/color-palette";
 // use -> color('denim',50)
 
-@import "constants/social-colors";
+@import "colors/social-colors";
 // use -> map-get($social-colors, github)
 
-@import "constants/ibm-colors";
+@import "colors/ibm-colors";
 // use -> ibmColor('denim',50)
 
 $snow: #fffafa;
@@ -59,6 +59,9 @@ $comment: color('gray',40);
 
 
 //---------- IMPORTS ----------//
+// Colors
+@import "colors/patterns";
+
 // Constants
 @import "constants/grid";
 @import "constants/flexbox";
@@ -68,7 +71,10 @@ $comment: color('gray',40);
 // Components
 @import "components/buttons";
 @import "components/color-grid";
+@import "components/inputs";
+@import "components/modal";
 @import "components/side-nav";
+@import "components/tables";
 
 
 

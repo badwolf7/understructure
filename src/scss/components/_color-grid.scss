@@ -15,14 +15,16 @@
   }
 }
 
+
+
 @each $color, $vals in $palette{
-.color-#{$color}{
-  ul{
-    @each $val, $hex in $vals{
-      .color-val-#{$val} {
-        background: $hex;
+  .color-#{$color}{
+    ul{
+      @each $val, $hex in $vals{
+        .color-val-#{$val} {
+          background: $hex;
+        }
       }
     }
   }
-}
 }

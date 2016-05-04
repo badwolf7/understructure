@@ -1,0 +1,40 @@
+.modal-out{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(color('gray',90),0.4);
+  z-index: 900;
+  box-sizing: border-box;
+  display: none;
+
+  .modal-in{
+    position: absolute;
+    top: 45px;
+    z-index: 905;
+    background: $snow;
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    header .close-modal{
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      color: color('gray',40);
+      border: 1px solid color('gray',40);
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 2px;
+      transition: color 0.3s ease, border 0.3s ease;
+      &:hover{
+        color: color('red',50);
+        border-color: color('red',50);
+      }
+    }
+  }
+}
