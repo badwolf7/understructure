@@ -1,4 +1,18 @@
 table{
+  th,
+  td{
+    padding: 3px 2%;
+    min-width: 50px;
+  }
+
+  .no-wrap{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+
   @media (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px){
 
     // Force table to not be like tables anymore

@@ -20,6 +20,25 @@ $(function(){
 
 
 
+
+
+  /////////////////////////////// TABLES
+  //////////////////////////////////////
+  // size table based on columns
+  // $('table').each(function(){
+  //   var rowCount = $(this).children('tbody').children('tr:nth-child(1)').children('td').length;
+  //   var rowWidth = 100 / rowCount + '%';
+
+  //   console.log(rowWidth);
+
+  //   $(this).children('thead').children('tr').children('th').css({'width': rowWidth});
+  //   $(this).children('tbody').children('tr').children('td').css({'width': rowWidth});
+  // });
+
+
+
+
+
   ////////////////////////////// TRACKER
   //////////////////////////////////////
   function tracker(){
