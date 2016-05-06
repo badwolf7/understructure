@@ -8,9 +8,9 @@
 
 $code-comment: color('metal',55);
 $code-element: color('teal',40);
-$code-attr: color('pink',40);
-$code-purple: color('pink',30);
-$code-string: color('yellow-green',25);
+$code-attr: color('pink',45);
+$code-int: color('red',35);
+$code-string: color('olive',40);
 $code-var: color('aqua',40);
 $code-regex: color('pink',35);
 $code-bg: color('metal',90);
@@ -82,7 +82,7 @@ pre[class*="language-"] {
 
 .token.boolean,
 .token.number {
-	color: $code-purple;
+	color: $code-int;
 }
 
 .token.selector,
