@@ -6,13 +6,13 @@
  */
 
 
-$code-gray: slategray;
-$code-pink: #f92672;
-$code-purple: #ae81ff;
-$code-green: #a6e22e;
-$code-yellow: #e6db74;
-$code-light-blue: #66d9ef;
-$code-orange: #fd971f;
+$code-comment: color('metal',55);
+$code-element: color('teal',40);
+$code-attr: color('pink',40);
+$code-purple: color('pink',30);
+$code-string: color('green',20);
+$code-var: color('aqua',40);
+$code-regex: color('pink',35);
 $code-bg: color('metal',90);
 
 
@@ -61,7 +61,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: $code-gray;
+	color: $code-comment;
 }
 
 .token.punctuation {
@@ -77,7 +77,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: $code-pink;
+	color: $code-element;
 }
 
 .token.boolean,
@@ -91,7 +91,8 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: $code-green;
+	color: $code-attr;
+
 }
 
 .token.operator,
@@ -106,16 +107,16 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.function {
-	color: $code-yellow;
+	color: $code-string;
 }
 
 .token.keyword {
-	color: $code-light-blue;
+	color: $code-var;
 }
 
 .token.regex,
 .token.important {
-	color: $code-orange;
+	color: $code-regex;
 }
 
 .token.important,
