@@ -1,5 +1,5 @@
 {
-  "name": "understructure",
+  "name": "virgil",
   "version": "1.0.0",
   "description": "Measure Net Promoter Score (NPS) inside your web application.",
   "keywords": [
@@ -12,9 +12,9 @@
     "scss",
     "understructure"
   ],
-  "homepage": "http://understructure.mybluemix.net/",
+  "homepage": "http://virgil.mybluemix.net/",
   "bugs": {
-    "url": "https://github.ibm.com/hspringsteen/understructure",
+    "url": "https://github.ibm.com/hspringsteen/virgil",
     "email": "hspringsteen@us.ibm.com"
   },
   "license": "Apache2",
@@ -29,7 +29,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.ibm.com/hspringsteen/understructure"
+    "url": "https://github.ibm.com/hspringsteen/virgil"
   },
   "scripts": {
     "start": "node server.js",
