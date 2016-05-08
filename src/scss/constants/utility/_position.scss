@@ -30,12 +30,34 @@
   backface-visibility: hidden;
   position: fixed;
 }
+.pos-fixed-top-left{
+  top: 0;
+  left: 0;
+}
+.pos-fixed-top-right{
+  top: 0;
+  right: 0;
+}
+.pos-fixed-bottom-right{
+  bottom: 0;
+  right: 0;
+}
+.pos-fixed-bottom-left{
+  bottom: 0;
+  left: 0;
+}
 
 
 .pos-relative{
   position: relative;
 }
-
 .pos-static{
   position: static;
+}
+
+
+@for $i from -5 through 1000{
+  .z-#{$i}{
+    z-index: $i;
+  }
 }

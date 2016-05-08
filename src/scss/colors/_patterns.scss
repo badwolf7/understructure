@@ -1,300 +1,236 @@
-#patterns{
-  .title-bar{
-    position: relative;
-    h1{
-      color: color('gray',90);
-    }
-    p{
-      position: absolute;
-      right: 2%;
-      bottom: 7px;
-    }
-  }
-  .patterns{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    h1{
-      width: 100%;
-    }
-
-    .pattern{
-      height: 325px;
-      width: 33.33333333333333%;
-      position: relative;
-
-      .overlay{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(color('gray',90),0.7);
-        cursor: pointer;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.5s ease, opacity 0.5s ease;
-        p{
-          color: $snow;
-          position: absolute;
-          top: 35%;
-          left: 28%;
-          font-size: 2em;
-        }
-      }
-
-      &:hover{
-        .overlay{
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
+.pattern{
+  h1,
+  h2,
+  p{
+    display: inline-block;
+    margin-top: 0;
+    padding: 20px 2%;
   }
 
-  .pattern{
-    &.diamonds{
-      h1,
-      h2,
-      p{
-        background: rgba(color('gray',20),0.75);
-        color: color('gray',90);
-      }
-    }
 
-    &.blueprint{
-      h1,
-      h2,
-      p{
-        background: rgba(color('blue',90),0.75);
-        color: $snow;
-      }
-    }
 
-    &.argyle{
-      h1,
-      h2,
-      p{
-        background: rgba(color('metal',90),0.75);
-        color: color('metal',10);
-      }
-    }
-
-    &.platforms{
-      h1,
-      h2,
-      p{
-        background: rgba(color('teal',90),0.75);
-        color: color('teal',20);
-      }
-    }
-
-    &.retro{
-      h1,
-      h2,
-      p{
-        background: rgba(color('orange',90),0.75);
-        color: color('orange',20);
-      }
-    }
-
-    &.cubes{
-      h1,
-      h2,
-      p{
-        background: rgba(color('gray',90),0.75);
-        color: color('gray',20);
-      }
-    }
-
-    &.zig-zag{
-      h1,
-      h2,
-      p{
-        background: rgba(color('red',90),0.75);
-        color: color('magenta',10);
-      }
-    }
-
-    &.stripes-diagonal,
-    &.stripes-vertical,
-    &.stripes-horizontal{
-      h1,
-      h2,
-      p{
-        background: rgba(color('blue',90),0.75);
-        color: color('orange',40);
-      }
-    }
-
-    &.weave{
-      h1,
-      h2,
-      p{
-        background: rgba(color('purple',90),0.75);
-        color: color('magenta',10);
-      }
-    }
-
-    &.stary-night{
-      h1,
-      h2,
-      p{
-        background: rgba(color('metal',90),0.75);
-        color: $snow;
-      }
-    }
-
-    &.carbon{
-      h1,
-      h2,
-      p{
-        background: rgba(color('metal',90),0.75);
-        color: color('gray',20);
-      }
-    }
-
-    &.carbon-fiber{
-      h1,
-      h2,
-      p{
-        background: rgba(color('metal',90),0.75);
-        color: color('gray',10);
-      }
-    }
-
-    &.steps{
-      h1,
-      h2,
-      p{
-        background: rgba(color('magenta',90),0.75);
-        color: color('teal',20);
-      }
-    }
-
-    &.hearts{
-      h1,
-      h2,
-      p{
-        background: rgba(color('red',90),0.75);
-        color: color('red',20);
-      }
-    }
-
-    &.waves{
-      h1,
-      h2,
-      p{
-        background: rgba(color('blue',90),0.75);
-        color: color('blue',20);
-      }
-    }
-
-    &.stars{
-      h1,
-      h2,
-      p{
-        background: rgba(color('metal',90),0.75);
-        color: lighten(color('yellow',10), 15);
-      }
-    }
-
-    &.sixties{
-      h1,
-      h2,
-      p{
-        background: rgba(color('green',90),0.75);
-        color: #EDFFDB;
-      }
-    }
-
-    &.brick{
-      h1,
-      h2,
-      p{
-        background: rgba(color('red',90),0.75);
-        color: color('red',40);
-      }
-    }
-
-    &.seigaiha{
-      h1,
-      h2,
-      p{
-        background: rgba(color('gray',90),0.75);
-        color: $snow;
-      }
-    }
-
-    &.polka-dot,
-    &.houndstooth,
-    &.checkerboard,
-    &.diagonal-checkerboard{
-      h1,
-      h2,
-      p{
-        background: rgba(color('gray',90),0.75);
-        color: $snow;
-      }
-    }
-
-    &.tartan{
-      h1,
-      h2,
-      p{
-        background: rgba(color('red',90),0.75);
-        color: color('red',10);
-      }
-    }
-
-    &.madras{
-      h1,
-      h2,
-      p{
-        background: rgba(color('orange',90),0.75);
-        color: lighten(color('yellow',10),18);
-      }
-    }
-
-    &.ruled-paper{
-      h1,
-      h2,
-      p{
-        background: rgba(color('blue',90),0.75);
-        color: $snow;
-      }
-    }
-
-    &.tablecloth{
-      h1,
-      h2,
-      p{
-        background: rgba(color('red',90),0.75);
-        color: $snow;
-      }
-    }
-
+  &.diamonds{
     h1,
     h2,
     p{
-      display: inline-block;
-      margin-top: 0;
-      padding: 20px 2%;
+      background: rgba(color('gray',20),0.75);
+      color: color('gray',90);
     }
   }
 
-  .pattern,
-  .pattern h1,
-  .pattern h2,
-  .pattern p{
-    transition: background 1s ease, background-color 1s ease, background-image 1s ease, background-size 1s ease, background-position 1s ease, color 1s ease;
+  &.blueprint{
+    h1,
+    h2,
+    p{
+      background: rgba(color('blue',90),0.75);
+      color: $snow;
+    }
   }
-}
+
+  &.argyle{
+    h1,
+    h2,
+    p{
+      background: rgba(color('metal',90),0.75);
+      color: color('metal',10);
+    }
+  }
+
+  &.platforms{
+    h1,
+    h2,
+    p{
+      background: rgba(color('teal',90),0.75);
+      color: color('teal',20);
+    }
+  }
+
+  &.retro{
+    h1,
+    h2,
+    p{
+      background: rgba(color('orange',90),0.75);
+      color: color('orange',20);
+    }
+  }
+
+  &.cubes{
+    h1,
+    h2,
+    p{
+      background: rgba(color('gray',90),0.75);
+      color: color('gray',20);
+    }
+  }
+
+  &.zig-zag{
+    h1,
+    h2,
+    p{
+      background: rgba(color('red',90),0.75);
+      color: color('magenta',10);
+    }
+  }
+
+  &.stripes-diagonal,
+  &.stripes-vertical,
+  &.stripes-horizontal{
+    h1,
+    h2,
+    p{
+      background: rgba(color('blue',90),0.75);
+      color: color('orange',40);
+    }
+  }
+
+  &.weave{
+    h1,
+    h2,
+    p{
+      background: rgba(color('purple',90),0.75);
+      color: color('magenta',10);
+    }
+  }
+
+  &.stary-night{
+    h1,
+    h2,
+    p{
+      background: rgba(color('metal',90),0.75);
+      color: $snow;
+    }
+  }
+
+  &.carbon{
+    h1,
+    h2,
+    p{
+      background: rgba(color('metal',90),0.75);
+      color: color('gray',20);
+    }
+  }
+
+  &.carbon-fiber{
+    h1,
+    h2,
+    p{
+      background: rgba(color('metal',90),0.75);
+      color: color('gray',10);
+    }
+  }
+
+  &.steps{
+    h1,
+    h2,
+    p{
+      background: rgba(color('magenta',90),0.75);
+      color: color('teal',20);
+    }
+  }
+
+  &.hearts{
+    h1,
+    h2,
+    p{
+      background: rgba(color('red',90),0.75);
+      color: color('red',20);
+    }
+  }
+
+  &.waves{
+    h1,
+    h2,
+    p{
+      background: rgba(color('blue',90),0.75);
+      color: color('blue',20);
+    }
+  }
+
+  &.stars{
+    h1,
+    h2,
+    p{
+      background: rgba(color('metal',90),0.75);
+      color: lighten(color('yellow',10), 15);
+    }
+  }
+
+  &.sixties{
+    h1,
+    h2,
+    p{
+      background: rgba(color('green',90),0.75);
+      color: #EDFFDB;
+    }
+  }
+
+  &.brick{
+    h1,
+    h2,
+    p{
+      background: rgba(color('red',90),0.75);
+      color: color('red',40);
+    }
+  }
+
+  &.seigaiha{
+    h1,
+    h2,
+    p{
+      background: rgba(color('gray',90),0.75);
+      color: $snow;
+    }
+  }
+
+  &.polka-dot,
+  &.houndstooth,
+  &.checkerboard,
+  &.diagonal-checkerboard{
+    h1,
+    h2,
+    p{
+      background: rgba(color('gray',90),0.75);
+      color: $snow;
+    }
+  }
+
+  &.tartan{
+    h1,
+    h2,
+    p{
+      background: rgba(color('red',90),0.75);
+      color: color('red',10);
+    }
+  }
+
+  &.madras{
+    h1,
+    h2,
+    p{
+      background: rgba(color('orange',90),0.75);
+      color: lighten(color('yellow',10),18);
+    }
+  }
+
+  &.ruled-paper{
+    h1,
+    h2,
+    p{
+      background: rgba(color('blue',90),0.75);
+      color: $snow;
+    }
+  }
+
+  &.tablecloth{
+    h1,
+    h2,
+    p{
+      background: rgba(color('red',90),0.75);
+      color: $snow;
+    }
+  }
 
 
-.pattern{
   &.diamonds{
     background-color: rgba(darken(color('gray',10),5), 0.25);
     background-image:
@@ -785,23 +721,3 @@
     background-size: 50px 50px;
   }
 }
-
-
-
-#day{
-  #resources{
-    .title-bar{
-      color: $snow;
-    }
-  }
-}
-
-
-
-// #night{
-//   #resources{
-//     .title-bar{
-//       background: color('blue',90);
-//     }
-//   }
-// }

@@ -14,3 +14,38 @@
 .clear-both{
   clear: both;
 }
+.clearfix{
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+  }
+
+  &:after{
+    clear: both;
+  }
+}
+
+
+.fit{
+  width: 100%;
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.half-width{
+  width: 50%;
+}
+
+
+.fill{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+.hidden{
+  visibility: hidden;
+}
