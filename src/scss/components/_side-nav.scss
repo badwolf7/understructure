@@ -5,9 +5,26 @@
   >ul{
     ul{
       padding-left: 13px;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: max-height 0.6s ease, visibility 0.6s ease, opacity 0.6s ease;
     }
+
+    .visible{
+      max-height: 500px;
+      visibility: visible;
+      opacity: 1;
+    }
+
     >li{
       margin-left: 5px !important;
+    }
+
+    li:hover ul{
+      max-height: 500px;
+      visibility: visible;
+      opacity: 1;
     }
   }
 

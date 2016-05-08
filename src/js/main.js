@@ -22,23 +22,6 @@ $(function(){
 
 
 
-  /////////////////////////////// TABLES
-  //////////////////////////////////////
-  // size table based on columns
-  // $('table').each(function(){
-  //   var rowCount = $(this).children('tbody').children('tr:nth-child(1)').children('td').length;
-  //   var rowWidth = 100 / rowCount + '%';
-
-  //   console.log(rowWidth);
-
-  //   $(this).children('thead').children('tr').children('th').css({'width': rowWidth});
-  //   $(this).children('tbody').children('tr').children('td').css({'width': rowWidth});
-  // });
-
-
-
-
-
   ////////////////////////////// TRACKER
   //////////////////////////////////////
   function tracker(){
@@ -49,12 +32,24 @@ $(function(){
       var id = $(this).attr('id');
 
       if(top < scrollTop + 50){
-        $('.tracker-link[href="#'+id+'"').addClass('tracker-current');
+        if(!$('.tracker-link[href="#'+id+'"').hasClass('tracker-current')){
+          $('.tracker-link').removeClass('tracker-current');
+          $('.tracker ul').removeClass('visible');
+
+
+          $('.tracker-link[href="#'+id+'"').addClass('tracker-current');
+
+
+          $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').addClass('visible');
+          $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').parent('li').parent('ul').addClass('visible');
+          $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').parent('li').parent('ul').parent('li').parent('ul').addClass('visible');
+        }
       }else{
-        $('.tracker-link[href="#'+id+'"').removeClass('tracker-current');
+        $('.tracker-link[href="#'+id+'"').parent('li').removeClass('tracker-current');
       }
     });
   }
+  tracker();
 
   $(window).scroll(function(){
     tracker();
