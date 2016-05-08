@@ -16,8 +16,8 @@ $code-regex: color('pink',35);
 $code-bg: color('metal',90);
 
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*="lang-"],
+pre[class*="lang-"] {
 	color: $snow;
 	text-shadow: 0 1px rgba($code-bg, 0.3);
 	font-family: $mono;
@@ -40,19 +40,19 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*="lang-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*="lang-"],
+pre[class*="lang-"] {
 	background: $code-bg;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="lang-"] {
 	padding: 0.4em 0.5em 0.3em;
 	white-space: normal;
 }
@@ -98,7 +98,7 @@ pre[class*="language-"] {
 .token.operator,
 .token.entity,
 .token.url,
-.language-css .token.string,
+.lang-css .token.string,
 .style .token.string,
 .token.variable {
 	color: $snow;
@@ -171,10 +171,10 @@ pre.line-numbers {
 }
 
 
-div.prism-show-language {
+div.prism-show-lang {
 	position: relative;
 
-	> div.prism-show-language-label {
+	> div.prism-show-lang-label {
 		color: black;
 		background-color: #CFCFCF;
 		display: inline-block;

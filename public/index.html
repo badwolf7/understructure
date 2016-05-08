@@ -82,13 +82,15 @@
   <!-- JavaScript -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
+
+
+
+
+
 <body>
   <header class="page-header">
     <h1 class="font-size-2 weight-300">Virgil</h1>
   </header>
-
-
-
 
 
   <aside class="float-left">
@@ -117,6 +119,16 @@
             </li>
 
             <li><a class="page-link tracker-link" href="#code">Code</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="page-link tracker-link" href="#utility">Utility Classes</a>
+          <ul>
+            <li><a class="page-link tracker-link" href="#util-display">Display</a></li>
+            <li><a class="page-link tracker-link" href="#util-forms">Forms</a></li>
+            <li><a class="page-link tracker-link" href="#util-position">Position</a></li>
+            <li><a class="page-link tracker-link" href="#util-text">Text</a></li>
           </ul>
         </li>
 
@@ -156,10 +168,10 @@
         <h1>Basic Usage</h1>
       </header>
 
-      <p>You will need to include the <code class="language-none">virgil.css</code> and <code class="language-none">virgil.js</code> files in your page.</p>
+      <p>You will need to include the <code class="lang-none">virgil.css</code> and <code class="lang-none">virgil.js</code> files in your page.</p>
       <p><strong>Example:</strong></p>
 
-      <pre class="language-html"><code>
+      <pre class="lang-html"><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -270,17 +282,17 @@
         <header>
           <h2>Code</h2>
         </header>
-        <p>Your <code class="language-markdown">code</code> can be inline or displayed as a block.</p>
+        <p>Your <code class="lang-markdown">code</code> can be inline or displayed as a block.</p>
 
         <h3>Inline Code</h3>
-        <code class="language-html">
+        <code class="lang-html">
           &lt;header&gt;
             &lt;h1&gt;Typography&lt;/h1&gt;
           &lt;/header&gt;
         </code>
 
         <h3>Code Block</h3>
-        <pre class="language-js"><code>
+        <pre class="lang-js"><code>
 var pass = 50;   // Pass mark
 var score = 90;  // Score
 var lang = /\blang(?:uage)?-(\w+)\b/i;
@@ -296,20 +308,357 @@ el.innerHTML = 'Level passed: ' + hasPassed;
         <section>
           <h3>Basic Usage</h3>
 
-          <p>Classes only work with <code class="language-html">&lt;code&gt;</code> elements, since marking up code without a <code class="language-html">&lt;code&gt;</code> element is semantically invalid. According to the HTML5 spec, the recommended way to define a code language is a <code class="language-none">language-xxxx</code> class, which is what Prism uses. To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple <code class="language-html">&lt;code&gt;</code> elements have the same language, you can add the <code class="language-none">language-xxxx</code> class on one of their common ancestors. This way, you can also define a document-wide default language, by adding a <code class="language-none">language-xxxx</code> class on the <code class="language-html">&lt;body&gt;</code> or <code class="language-html">&lt;html&gt;</code> element.</p>
+          <p>Classes only work with <code class="lang-html">&lt;code&gt;</code> elements, since marking up code without a <code class="lang-html">&lt;code&gt;</code> element is semantically invalid. According to the HTML5 spec, the recommended way to define a code language is a <code class="lang-none">lang-xxxx</code> class, which is what Prism uses. To make things easier however, Prism assumes that this language definition is inherited. Therefore, if multiple <code class="lang-html">&lt;code&gt;</code> elements have the same language, you can add the <code class="lang-none">lang-xxxx</code> class on one of their common ancestors. This way, you can also define a document-wide default language, by adding a <code class="lang-none">lang-xxxx</code> class on the <code class="lang-html">&lt;body&gt;</code> or <code class="lang-html">&lt;html&gt;</code> element.</p>
 
-          <p>If you want to opt-out of highlighting for a <code class="language-html">&lt;code&gt;</code> element that is a descendant of an element with a declared code language, you can add the class <code class="language-none">language-none</code> to it (or any non-existing language, really).</p>
+          <p>If you want to opt-out of highlighting for a <code class="lang-html">&lt;code&gt;</code> element that is a descendant of an element with a declared code language, you can add the class <code class="lang-none">lang-none</code> to it (or any non-existing language, really).</p>
 
-          <p>The recommended way to mark up a code block is a <code class="language-html">&lt;pre&gt;</code> element with a <code class="language-html">&lt;code&gt;</code> element inside, like so:</p>
+          <p>The recommended way to mark up a code block is a <code class="lang-html">&lt;pre&gt;</code> element with a <code class="lang-html">&lt;code&gt;</code> element inside, like so:</p>
 
-          <pre><code class="language-html">
-  &lt;pre&gt;&lt;code class="language-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;
+          <pre><code class="lang-html">
+  &lt;pre&gt;&lt;code class="lang-css"&gt;p { color: red }&lt;/code&gt;&lt;/pre&gt;
           </code></pre>
 
-          <p>If you use that pattern, the <code class="language-html">&lt;pre&gt;</code> will automatically get the <code class="language-none">language-xxxx</code> class (if it doesn’t already have it) and will be styled as a code block.</p>
+          <p>If you use that pattern, the <code class="lang-html">&lt;pre&gt;</code> will automatically get the <code class="lang-none">lang-xxxx</code> class (if it doesn’t already have it) and will be styled as a code block.</p>
         </section>
       </article>
     </section>
+
+
+
+
+
+    <article id="utility" class="tracker-section">
+      <header>
+        <h2>Utility Classes</h2>
+      </header>
+
+
+      <section id="util-display" class="tracker-section">
+        <header>
+          <h3>Display</h3>
+        </header>
+
+        <pre class="lang-scss"><code>
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+
+// Fix for Firefox bug: an image styled `max-width: 100%` within an inline-block will display at its default size, and not limit its width to 100% of an ancestral container.
+.d-inlineBlock {
+  display: inline-block;
+  max-width: 100%;
+}
+
+
+.d-hidden {
+  display: none;
+}
+
+
+.d-table {
+  display: table;
+}
+.d-tableCell {
+  display: table-cell;
+}
+.d-tableRow {
+  display: table-row;
+}
+
+
+// Completely remove from the flow but leave available to screen readers.
+.d-hiddenVisually {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-forms" class="tracker-section">
+        <header>
+          <h3>Forms</h3>
+        </header>
+
+
+        <pre class="lang-scss"><code>
+.select-box{
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '▾';
+    position: absolute;
+    width: 37px;
+    color: color('gray',30);
+    font-weight: bold;
+    font-size: 1.25em;
+    right: -10px;
+    bottom: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    right: 2px;
+    top: 2px;
+    width: 37px;
+    height: 60px;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  select {
+    position: relative;
+    width: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgba(color('gray',10), 0.4);
+    color: color('gray',80);
+    border: 1px solid color('gray',80);
+    outline: none;
+    font-size: 14px;
+    padding: 10px 9px;
+    margin: 0;
+    margin-left: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 38px;
+    padding-left: 30px;
+    border-radius: 0;
+  }
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-layout" class="tracker-section">
+        <header>
+          <h3>Layout</h3>
+        </header>
+
+
+        <pre class="lang-scss"><code>
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+.clear-left{
+  clear: left;
+}
+.clear-right{
+  clear: right;
+}
+.clear-both{
+  clear: both;
+}
+.clearfix{
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+  }
+
+  &:after{
+    clear: both;
+  }
+}
+
+
+.fit{
+  width: 100%;
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.half-width{
+  width: 50%;
+}
+
+
+.fill{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+.hidden{
+  visibility: hidden;
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-position" class="tracker-section">
+        <header>
+          <h3>Position</h3>
+        </header>
+
+
+        <pre class="lang-scss"><code>
+.pos-fit,
+.pos-absolute-center,
+.pos-absolute{
+  position: absolute;
+}
+
+
+// Element will be centered to its nearest relatively-positioned ancestor.
+.pos-fixed-center,
+.pos-absolute-center{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pos-fit,
+.pos-full-screen{
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+}
+
+
+.pos-full-screen,
+.pos-fixed-center,
+.pos-fixed{
+  // Make sure fixed elements are promoted into a new layer, for performance reasons.
+  backface-visibility: hidden;
+  position: fixed;
+}
+.pos-fixed-top-left{
+  top: 0;
+  left: 0;
+}
+.pos-fixed-top-right{
+  top: 0;
+  right: 0;
+}
+.pos-fixed-bottom-right{
+  bottom: 0;
+  right: 0;
+}
+.pos-fixed-bottom-left{
+  bottom: 0;
+  left: 0;
+}
+
+
+.pos-relative{
+  position: relative;
+}
+.pos-static{
+  position: static;
+}
+
+
+@for $i from -5 through 1000{
+  .z-#{$i}{
+    z-index: $i;
+  }
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-text" class="tracker-section">
+        <header>
+          <h3>Text</h3>
+        </header>
+
+        <pre class="lang-scss"><code>
+.v-align-baseline {
+  vertical-align: baseline;
+}
+.v-align-bottom {
+  vertical-align: bottom;
+}
+.v-align-middle {
+  vertical-align: middle;
+}
+.v-align-top {
+  vertical-align: top;
+}
+
+
+
+.text-Break {
+  word-wrap: break-word;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-inherit-color {
+  color: inherit;
+}
+
+
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+
+/*
+  Enables font kerning in all browsers.
+  http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+
+  1. Chrome (not Windows), Firefox, IE 10+
+  2. Safari 7 and future browsers
+  3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+*/
+.text-Kern {
+  font-feature-settings: "kern" 1; /* 1 */
+  font-kerning: normal; /* 2 */
+  text-rendering: optimizeLegibility; /* 3 */
+}
+        </code></pre>
+      </section>
+    </article>
 
 
 
@@ -419,7 +768,7 @@ el.innerHTML = 'Level passed: ' + hasPassed;
             <h3>Basic Usage</h3>
           </header>
 
-          <pre class="language-html"><code>
+          <pre class="lang-html"><code>
 &lt;ul&gt;
   &lt;li&gt;&lt;a class="page-link" href="#page-flow"&gt;Page Flow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -437,7 +786,7 @@ el.innerHTML = 'Level passed: ' + hasPassed;
             <h3>Basic Usage</h3>
           </header>
 
-          <pre class="language-html"><code>
+          <pre class="lang-html"><code>
 &lt;nav&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a class="tracker-link" href="#page-flow"&gt;Tracker&lt;/a&gt;&lt;/li&gt;

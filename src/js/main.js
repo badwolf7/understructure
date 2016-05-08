@@ -31,8 +31,8 @@ $(function(){
       var top = $(this).position().top;
       var id = $(this).attr('id');
 
-      if(top < scrollTop + 50){
-        if(!$('.tracker-link[href="#'+id+'"').hasClass('tracker-current')){
+      if(!$('.tracker-link[href="#'+id+'"').hasClass('tracker-current')){
+        if(top < scrollTop + 50){
           $('.tracker-link').removeClass('tracker-current');
           $('.tracker ul').removeClass('visible');
 
@@ -43,9 +43,9 @@ $(function(){
           $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').addClass('visible');
           $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').parent('li').parent('ul').addClass('visible');
           $('.tracker-link[href="#'+id+'"').parent('li').parent('ul').parent('li').parent('ul').parent('li').parent('ul').addClass('visible');
+        }else{
+          $('.tracker-link[href="#'+id+'"').parent('li').removeClass('tracker-current');
         }
-      }else{
-        $('.tracker-link[href="#'+id+'"').parent('li').removeClass('tracker-current');
       }
     });
   }
