@@ -1,6 +1,6 @@
 .side-nav{
   background: $snow;
-  transition: width 0.4s ease, box-shadow 0.4s ease;
+  transition: width 0.4s ease, box-shadow 0.4s ease, margin 0.4s ease;
 
   >ul{
     ul{
@@ -113,5 +113,39 @@
 
   >ul{
     z-index: 1;
+  }
+}
+
+
+@media (max-width: 1012px){
+  .side-nav-md-hide-left{
+    margin-left: -100%;
+  }
+  .side-nav-md-hide-right{
+    margin-right: -100%;
+  }
+}
+@media (max-width: 768px){
+  .side-nav-sm-hide-left{
+    margin-left: -100%;
+  }
+  .side-nav-sm-hide-right{
+    margin-right: -100%;
+  }
+}
+@media (max-width: 640px){
+  .side-nav-xs-hide-left{
+    margin-left: -100%;
+  }
+  .side-nav-xs-hide-right{
+    margin-right: -100%;
+  }
+}
+@media (max-width: 320px){
+  .side-nav-xxs-hide-left{
+    margin-left: -100%;
+  }
+  .side-nav-xxs-hide-right{
+    margin-right: -100%;
   }
 }
