@@ -1,0 +1,41 @@
+.pos-fit,
+.pos-absolute-center,
+.pos-absolute{
+  position: absolute;
+}
+
+
+// Element will be centered to its nearest relatively-positioned ancestor.
+.pos-fixed-center,
+.pos-absolute-center{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pos-fit,
+.pos-full-screen{
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+}
+
+
+.pos-full-screen,
+.pos-fixed-center,
+.pos-fixed{
+  // Make sure fixed elements are promoted into a new layer, for performance reasons.
+  backface-visibility: hidden;
+  position: fixed;
+}
+
+
+.pos-relative{
+  position: relative;
+}
+
+.pos-static{
+  position: static;
+}

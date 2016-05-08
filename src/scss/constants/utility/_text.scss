@@ -1,0 +1,60 @@
+.v-align-baseline {
+  vertical-align: baseline;
+}
+.v-align-bottom {
+  vertical-align: bottom;
+}
+.v-align-middle {
+  vertical-align: middle;
+}
+.v-align-top {
+  vertical-align: top;
+}
+
+
+
+.text-Break {
+  word-wrap: break-word;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-inherit-color {
+  color: inherit;
+}
+
+
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+
+/*
+  Enables font kerning in all browsers.
+  http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+
+  1. Chrome (not Windows), Firefox, IE 10+
+  2. Safari 7 and future browsers
+  3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+*/
+.text-Kern {
+  font-feature-settings: "kern" 1; /* 1 */
+  font-kerning: normal; /* 2 */
+  text-rendering: optimizeLegibility; /* 3 */
+}
