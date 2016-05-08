@@ -21,7 +21,7 @@
       margin-left: 5px !important;
     }
 
-    li:hover ul{
+    li:hover > ul{
       max-height: 500px;
       visibility: visible;
       opacity: 1;
