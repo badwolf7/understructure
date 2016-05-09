@@ -18,6 +18,7 @@ const gulp = require('gulp'),
       changed = require('gulp-changed'),
       next = require('gulp-next'),
       sourcemaps = require('gulp-sourcemaps'),
+      rename = require('gulp-rename'),
 
       // node
       colors = require('colors');
@@ -43,11 +44,22 @@ var dirs = {
 
 
 
-gulp.task('scssMain', function(){
+gulp.task('scssMain', ['scssPretty'], function(){
   gulp.src(dirs.src.scss.main)
     .pipe(sourcemaps.init())
       .pipe(changed(dirs.public.css))
-      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(sass({outputStyle: 'compressed'}))
+      .pipe(rename({extname:'.min.css'}))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dirs.public.css))
+    .pipe(livereload())
+});
+
+gulp.task('scssPretty', function(){
+  gulp.src(dirs.src.scss.main)
+    .pipe(sourcemaps.init())
+      .pipe(changed(dirs.public.css))
+      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(dirs.public.css))
     .pipe(livereload())
@@ -78,13 +90,28 @@ gulp.task('css', function(){
     }));
 });
 
-gulp.task('javascript', function(){
+gulp.task('javascript', ['javascriptPretty'], function(){
+  return gulp.src(dirs.src.js)
+    .pipe(sourcemaps.init())
+      .pipe(changed(dirs.public.js))
+      .pipe(uglify())
+      .pipe(concat('virgil.js'))
+      .pipe(rename({extname:'.min.js'}))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(dirs.public.js))
+    .pipe(livereload())
+    .pipe(next(function(){
+      console.log('\n Finished JavaScript'.bgGreen.black.bold);
+      console.log('\n');
+    }));
+});
+
+gulp.task('javascriptPretty', function(){
   return gulp.src(dirs.src.js)
     .pipe(sourcemaps.init())
       .pipe(changed(dirs.public.js))
       .pipe(jshint())
       .pipe(jshint.reporter(stylish))
-      .pipe(uglify())
       .pipe(concat('virgil.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(dirs.public.js))
