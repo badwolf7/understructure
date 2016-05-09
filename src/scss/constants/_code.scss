@@ -171,10 +171,10 @@ pre.line-numbers {
 }
 
 
-div.prism-show-lang {
+.prism-show-language {
 	position: relative;
 
-	> div.prism-show-lang-label {
+	> .prism-show-lang-label {
 		color: black;
 		background-color: #CFCFCF;
 		display: inline-block;

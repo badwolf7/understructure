@@ -10,35 +10,6 @@
   <link rel="stylesheet" href="./assets/css/virgil.min.css">
 
   <style>
-    .grid-display .row div{
-      box-shadow: inset 0 0 0 1px #584b54;
-      text-align: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      max-height: 109px;
-      position: relative;
-    }
-    .grid-display .row div:before{
-      content: "";
-      height: 100%;
-      width: 0.5em;
-      background: rgba(168,222,166,0.65);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    .grid-display .row div:after{
-      content: "";
-      height: 100%;
-      width: 0.5em;
-      background: rgba(168,222,166,0.65);
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-    }
-
     article{
       clear: both;
     }
@@ -91,33 +62,11 @@
     .page-header nav ul li a:hover:after{
       width: 100%;
     }
-
-
-    .heading-sample{
-      border-top: 1px solid rgba(168,222,166,0.65);
-      border-bottom: 1px solid rgba(168,222,166,0.65);
-      clear: both;
-      padding-top: 10px;
-      margin-top: 30px;
-    }
-
-
-    .patterns ul li{
-      margin-top: 25px;
-    }
-
-
-    .code-langs-list li{
-      margin-bottom: 20px;
-      min-width: 33%;
-    }
   </style>
 
   <!-- JavaScript -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
-
-
 
 
 
@@ -139,52 +88,64 @@
   </header>
 
 
+
   <aside class="float-left">
     <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
       <ul class="tracker">
-        <li><a class="page-link tracker-link" href="#basic-usage">Basic Usage</a></li>
-
-        <li><a href="css.html">CSS</a></li>
-
-        <li><a href="utility.html">Utility Classes</a></li>
-
-        <li><a href="components.html">Components</a></li>
-
-        <li><a href="js.html">JavaScript</a></li>
-
-        <li><a href="swatch-book.html">Colors</a></li>
-
-        <li><a href="patterns.html">Patterns</a></li>
+        <li><a class="page-link tracker-link" href="#javascript">JavaScript</a>
+        <li><a class="page-link tracker-link" href="#page-flow">Page Flow</a></li>
+        <li><a class="page-link tracker-link" href="#tracker">Tracker</a></li>
       </ul>
     </nav>
   </aside>
 
 
 
-
-
   <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
-    <section id="basic-usage" class="tracker-section">
+    <section id="javascript" class="tracker-section">
       <header class="section-header">
-        <h1>Basic Usage</h1>
+        <h1>JavaScript</h1>
       </header>
 
-      <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
-      <p><strong>Example:</strong></p>
+      <article id="page-flow" class="tracker-section">
+        <header>
+          <h2>Page Flow</h2>
+        </header>
 
-      <pre><code class="lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    ...
-    &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    ...
-    &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-      </code></pre>
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre><code class="lang-html">
+&lt;ul&gt;
+  &lt;li&gt;&lt;a class="page-link" href="#page-flow"&gt;Page Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </section>
+      </article>
+
+      <article id="tracker" class="tracker-section">
+        <header>
+          <h2>Tracker</h2>
+        </header>
+
+        <section>
+          <header>
+            <h3>Basic Usage</h3>
+          </header>
+
+          <pre><code class="lang-html">
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class="tracker-link" href="#page-flow"&gt;Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+...
+&lt;article id="tracker" class="tracker-section"&gt;&lt;/article&gt;
+          </code></pre>
+        </section>
+      </article>
     </section>
   </main>
 

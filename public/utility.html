@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta -->
+  <title>Virgil</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/virgil.min.css">
+
+  <style>
+    article{
+      clear: both;
+    }
+    section{
+      clear: both;
+      margin-bottom: 50px;
+    }
+
+    .page-header{
+      height: 50px;
+      padding: 0 2%;
+      box-shadow: 0 1px 5px 0 rgba(66,56,63,0.4);
+      margin-bottom: 25px;
+      background: #272822;
+      color: #c5e8de;
+    }
+    .page-header h1{
+      line-height: 50px;
+      color: #c5e8de;
+    }
+    .page-header h1:first-letter{
+      font-size: 1.2em;
+    }
+    .page-header nav ul li{
+      margin: 0 10px;
+    }
+    .page-header nav ul li a{
+      display: block;
+      position: relative;
+      color: #FFFAFA;
+      line-height: 50px;
+      padding: 0 13px;
+      transition: color 0.3s ease;
+    }
+    .page-header nav ul li a:after{
+      content: "";
+      width: 0;
+      margin: 0 auto;
+      height: 3px;
+      background: #99d6c5;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: width 0.3s ease;
+    }
+    .page-header nav ul li a:hover{
+      color: #99d6c5;
+    }
+    .page-header nav ul li a:hover:after{
+      width: 100%;
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+
+
+<body>
+  <header class="page-header">
+    <h1 class="font-size-2 weight-300 d-inline-block">Virgil</h1>
+
+    <nav class="float-right">
+      <ul class="flex flex-nowrap">
+        <li><a href="index.html">Basic Use</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="utility.html">Utility Classes</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="swatch-book.html">Colors</a></li>
+        <li><a href="patterns.html">Patterns</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <aside class="float-left">
+    <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
+      <ul class="tracker">
+        <li><a class="page-link tracker-link" href="#utility">Utility Classes</a></li>
+        <li><a class="page-link tracker-link" href="#util-display">Display</a></li>
+        <li><a class="page-link tracker-link" href="#util-forms">Forms</a></li>
+        <li><a class="page-link tracker-link" href="#util-layout">Layout</a></li>
+        <li><a class="page-link tracker-link" href="#util-position">Position</a></li>
+        <li><a class="page-link tracker-link" href="#util-text">Text</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+
+  <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
+    <article id="utility" class="tracker-section">
+      <header class="section-header">
+        <h1>Utility Classes</h1>
+      </header>
+
+
+      <section id="util-display" class="tracker-section">
+        <header>
+          <h2>Display</h2>
+        </header>
+
+        <pre><code class="lang-scss">
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+
+// Fix for Firefox bug: an image styled `max-width: 100%` within an inline-block will display at its default size, and not limit its width to 100% of an ancestral container.
+.d-inlineBlock {
+  display: inline-block;
+  max-width: 100%;
+}
+
+
+.d-hidden {
+  display: none;
+}
+
+
+.d-table {
+  display: table;
+}
+.d-tableCell {
+  display: table-cell;
+}
+.d-tableRow {
+  display: table-row;
+}
+
+
+// Completely remove from the flow but leave available to screen readers.
+.d-hiddenVisually {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-forms" class="tracker-section">
+        <header>
+          <h2>Forms</h2>
+        </header>
+
+
+        <pre><code class="lang-scss">
+.select-box{
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '▾';
+    position: absolute;
+    width: 37px;
+    color: color('gray',30);
+    font-weight: bold;
+    font-size: 1.25em;
+    right: -10px;
+    bottom: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    right: 2px;
+    top: 2px;
+    width: 37px;
+    height: 60px;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  select {
+    position: relative;
+    width: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgba(color('gray',10), 0.4);
+    color: color('gray',80);
+    border: 1px solid color('gray',80);
+    outline: none;
+    font-size: 14px;
+    padding: 10px 9px;
+    margin: 0;
+    margin-left: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 38px;
+    padding-left: 30px;
+    border-radius: 0;
+  }
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-layout" class="tracker-section">
+        <header>
+          <h2>Layout</h2>
+        </header>
+
+
+        <pre><code class="lang-scss">
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+
+.clear-left{
+  clear: left;
+}
+.clear-right{
+  clear: right;
+}
+.clear-both{
+  clear: both;
+}
+.clearfix{
+  &:before,
+  &:after{
+    content: "";
+    display: table;
+  }
+
+  &:after{
+    clear: both;
+  }
+}
+
+
+.fit{
+  width: 100%;
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.half-width{
+  width: 50%;
+}
+
+
+.fill{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+.hidden{
+  visibility: hidden;
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-position" class="tracker-section">
+        <header>
+          <h2>Position</h2>
+        </header>
+
+
+        <pre><code class="lang-scss">
+.pos-fit,
+.pos-absolute-center,
+.pos-absolute{
+  position: absolute;
+}
+
+
+// Element will be centered to its nearest relatively-positioned ancestor.
+.pos-fixed-center,
+.pos-absolute-center{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pos-fit,
+.pos-full-screen{
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+}
+
+
+.pos-full-screen,
+.pos-fixed-center,
+.pos-fixed{
+  // Make sure fixed elements are promoted into a new layer, for performance reasons.
+  backface-visibility: hidden;
+  position: fixed;
+}
+.pos-fixed-top-left{
+  top: 0;
+  left: 0;
+}
+.pos-fixed-top-right{
+  top: 0;
+  right: 0;
+}
+.pos-fixed-bottom-right{
+  bottom: 0;
+  right: 0;
+}
+.pos-fixed-bottom-left{
+  bottom: 0;
+  left: 0;
+}
+
+
+.pos-relative{
+  position: relative;
+}
+.pos-static{
+  position: static;
+}
+
+
+@for $i from -5 through 1000{
+  .z-#{$i}{
+    z-index: $i;
+  }
+}
+        </code></pre>
+      </section>
+
+
+      <section id="util-text" class="tracker-section">
+        <header>
+          <h2>Text</h2>
+        </header>
+
+        <pre><code class="lang-scss">
+.v-align-baseline {
+  vertical-align: baseline;
+}
+.v-align-bottom {
+  vertical-align: bottom;
+}
+.v-align-middle {
+  vertical-align: middle;
+}
+.v-align-top {
+  vertical-align: top;
+}
+
+
+
+.text-Break {
+  word-wrap: break-word;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-inherit-color {
+  color: inherit;
+}
+
+
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+
+/*
+  Enables font kerning in all browsers.
+  http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+
+  1. Chrome (not Windows), Firefox, IE 10+
+  2. Safari 7 and future browsers
+  3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+*/
+.text-Kern {
+  font-feature-settings: "kern" 1; /* 1 */
+  font-kerning: normal; /* 2 */
+  text-rendering: optimizeLegibility; /* 3 */
+}
+        </code></pre>
+      </section>
+    </article>
+  </main>
+
+
+  <script src="./assets/js/virgil.min.js"></script>
+</body>
+</html>

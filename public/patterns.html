@@ -1,127 +1,206 @@
-<section id="patterns">
-  <section class="title-bar pattern diamonds">
-    <h1>Patterns</h1>
-    <p>Diamond</p>
-  </section>
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta -->
+  <title>Virgil</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <section class="patterns">
-    <h1>Patterns</h1>
-    <a href="/patterns/diamonds" class="pattern diamonds">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Diamonds</h2>
-    </a>
-    <a href="/patterns/blueprint" class="pattern blueprint">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Blueprint</h2>
-    </a>
-    <a href="/patterns/argyle" class="pattern argyle">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Argyle</h2>
-    </a>
-    <a href="/patterns/platforms" class="pattern platforms">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Platforms</h2>
-    </a>
-    <a href="/patterns/retro" class="pattern retro">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Retro</h2>
-    </a>
-    <a href="/patterns/cubes" class="pattern cubes">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Cubes</h2>
-    </a>
-    <a href="/patterns/zig-zag" class="pattern zig-zag">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Zig Zag</h2>
-    </a>
-    <a href="/patterns/stripes-diagonal" class="pattern stripes-diagonal">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Diagonal Stripes</h2>
-    </a>
-    <a href="/patterns/stripes-vertical" class="pattern stripes-vertical">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Vertical Stripes</h2>
-    </a>
-    <a href="/patterns/stripes-horizontal" class="pattern stripes-horizontal">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Horizontal Stripes</h2>
-    </a>
-    <a href="/patterns/weave" class="pattern weave">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Weave</h2>
-    </a>
-    <a href="/patterns/stary-night" class="pattern stary-night">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Stary Night</h2>
-    </a>
-    <a href="/patterns/carbon" class="pattern carbon">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Carbon</h2>
-    </a>
-    <a href="/patterns/carbon-fiber" class="pattern carbon-fiber">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Carbon Fiber</h2>
-    </a>
-    <a href="/patterns/steps" class="pattern steps">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Steps</h2>
-    </a>
-    <a href="/patterns/hearts" class="pattern hearts">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Hearts</h2>
-    </a>
-    <a href="/patterns/waves" class="pattern waves">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Waves</h2>
-    </a>
-    <a href="/patterns/stars" class="pattern stars">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Stars</h2>
-    </a>
-    <a href="/patterns/sixties" class="pattern sixties">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Sixties</h2>
-    </a>
-    <a href="/patterns/brick" class="pattern brick">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Brick</h2>
-    </a>
-    <a href="/patterns/seigaiha" class="pattern seigaiha">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Seigaiha</h2>
-    </a>
-    <a href="/patterns/polka-dot" class="pattern polka-dot">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Polka Dot</h2>
-    </a>
-    <a href="/patterns/houndstooth" class="pattern houndstooth">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Houndstooth</h2>
-    </a>
-    <a href="/patterns/checkerboard" class="pattern checkerboard">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Checkerboard</h2>
-    </a>
-    <a href="/patterns/diagonal-checkerboard" class="pattern diagonal-checkerboard">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Diagonal Checkerboard</h2>
-    </a>
-    <a href="/patterns/tartan" class="pattern tartan">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Tartan</h2>
-    </a>
-    <a href="/patterns/madras" class="pattern madras">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Madras</h2>
-    </a>
-    <a href="/patterns/ruled-paper" class="pattern ruled-paper">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Ruled Paper</h2>
-    </a>
-    <a href="/patterns/tablecloth" class="pattern tablecloth">
-      <div class="overlay"><p>View Pattern</p></div>
-      <h2>Tablecloth</h2>
-    </a>
-  </section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/virgil.min.css">
 
-</section>
+  <style>
+    article{
+      clear: both;
+    }
+    section{
+      clear: both;
+      margin-bottom: 50px;
+    }
+
+    .page-header{
+      height: 50px;
+      padding: 0 2%;
+      box-shadow: 0 1px 5px 0 rgba(66,56,63,0.4);
+      margin-bottom: 25px;
+      background: #272822;
+      color: #c5e8de;
+    }
+    .page-header h1{
+      line-height: 50px;
+      color: #c5e8de;
+    }
+    .page-header h1:first-letter{
+      font-size: 1.2em;
+    }
+    .page-header nav ul li{
+      margin: 0 10px;
+    }
+    .page-header nav ul li a{
+      display: block;
+      position: relative;
+      color: #FFFAFA;
+      line-height: 50px;
+      padding: 0 13px;
+      transition: color 0.3s ease;
+    }
+    .page-header nav ul li a:after{
+      content: "";
+      width: 0;
+      margin: 0 auto;
+      height: 3px;
+      background: #99d6c5;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: width 0.3s ease;
+    }
+    .page-header nav ul li a:hover{
+      color: #99d6c5;
+    }
+    .page-header nav ul li a:hover:after{
+      width: 100%;
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+
+
+<body>
+  <header class="page-header">
+    <h1 class="font-size-2 weight-300 d-inline-block">Virgil</h1>
+
+    <nav class="float-right">
+      <ul class="flex flex-nowrap">
+        <li><a href="index.html">Basic Use</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="utility.html">Utility Classes</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="swatch-book.html">Colors</a></li>
+        <li><a href="patterns.html">Patterns</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <aside class="float-left">
+    <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
+      <ul class="tracker">
+        <li><a class="page-link tracker-link" href="#patterns">Patterns</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+
+  <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
+    <section id="patterns" class="tracker-section">
+      <header class="section-header">
+        <h1>Patterns</h1>
+      </header>
+
+      <section class="patterns">
+        <ul class="flex flex-wrap">
+          <li class="pattern diamonds lg-6 xs-12">
+            <h2>Diamonds</h2>
+          </li>
+          <li class="pattern blueprint lg-6 xs-12">
+            <h2>Blueprint</h2>
+          </li>
+          <li class="pattern argyle lg-6 xs-12">
+            <h2>Argyle</h2>
+          </li>
+          <li class="pattern platforms lg-6 xs-12">
+            <h2>Platforms</h2>
+          </li>
+          <li class="pattern retro lg-6 xs-12">
+            <h2>Retro</h2>
+          </li>
+          <li class="pattern cubes lg-6 xs-12">
+            <h2>Cubes</h2>
+          </li>
+          <li class="pattern zig-zag lg-6 xs-12">
+            <h2>Zig Zag</h2>
+          </li>
+          <li class="pattern stripes-diagonal lg-6 xs-12">
+            <h2>Diagonal Stripes</h2>
+          </li>
+          <li class="pattern stripes-vertical lg-6 xs-12">
+            <h2>Vertical Stripes</h2>
+          </li>
+          <li class="pattern stripes-horizontal lg-6 xs-12">
+            <h2>Horizontal Stripes</h2>
+          </li>
+          <li class="pattern weave lg-6 xs-12">
+            <h2>Weave</h2>
+          </li>
+          <li class="pattern stary-night lg-6 xs-12">
+            <h2>Stary Night</h2>
+          </li>
+          <li class="pattern carbon lg-6 xs-12">
+            <h2>Carbon</h2>
+          </li>
+          <li class="pattern carbon-fiber lg-6 xs-12">
+            <h2>Carbon Fiber</h2>
+          </li>
+          <li class="pattern steps lg-6 xs-12">
+            <h2>Steps</h2>
+          </li>
+          <li class="pattern hearts lg-6 xs-12">
+            <h2>Hearts</h2>
+          </li>
+          <li class="pattern waves lg-6 xs-12">
+            <h2>Waves</h2>
+          </li>
+          <li class="pattern stars lg-6 xs-12">
+            <h2>Stars</h2>
+          </li>
+          <li class="pattern sixties lg-6 xs-12">
+            <h2>Sixties</h2>
+          </li>
+          <li class="pattern brick lg-6 xs-12">
+            <h2>Brick</h2>
+          </li>
+          <li class="pattern seigaiha lg-6 xs-12">
+            <h2>Seigaiha</h2>
+          </li>
+          <li class="pattern polka-dot lg-6 xs-12">
+            <h2>Polka Dot</h2>
+          </li>
+          <li class="pattern houndstooth lg-6 xs-12">
+            <h2>Houndstooth</h2>
+          </li>
+          <li class="pattern checkerboard lg-6 xs-12">
+            <h2>Checkerboard</h2>
+          </li>
+          <li class="pattern diagonal-checkerboard lg-6 xs-12">
+            <h2>Diagonal Checkerboard</h2>
+          </li>
+          <li class="pattern tartan lg-6 xs-12">
+            <h2>Tartan</h2>
+          </li>
+          <li class="pattern madras lg-6 xs-12">
+            <h2>Madras</h2>
+          </li>
+          <li class="pattern ruled-paper lg-6 xs-12">
+            <h2>Ruled Paper</h2>
+          </li>
+          <li class="pattern tablecloth lg-6 xs-12">
+            <h2>Tablecloth</h2>
+          </li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+
+
+  <script src="./assets/js/virgil.min.js"></script>
+</body>
+</html>

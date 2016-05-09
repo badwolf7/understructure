@@ -10,35 +10,6 @@
   <link rel="stylesheet" href="./assets/css/virgil.min.css">
 
   <style>
-    .grid-display .row div{
-      box-shadow: inset 0 0 0 1px #584b54;
-      text-align: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      max-height: 109px;
-      position: relative;
-    }
-    .grid-display .row div:before{
-      content: "";
-      height: 100%;
-      width: 0.5em;
-      background: rgba(168,222,166,0.65);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-    .grid-display .row div:after{
-      content: "";
-      height: 100%;
-      width: 0.5em;
-      background: rgba(168,222,166,0.65);
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-    }
-
     article{
       clear: both;
     }
@@ -91,33 +62,11 @@
     .page-header nav ul li a:hover:after{
       width: 100%;
     }
-
-
-    .heading-sample{
-      border-top: 1px solid rgba(168,222,166,0.65);
-      border-bottom: 1px solid rgba(168,222,166,0.65);
-      clear: both;
-      padding-top: 10px;
-      margin-top: 30px;
-    }
-
-
-    .patterns ul li{
-      margin-top: 25px;
-    }
-
-
-    .code-langs-list li{
-      margin-bottom: 20px;
-      min-width: 33%;
-    }
   </style>
 
   <!-- JavaScript -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
-
-
 
 
 
@@ -139,52 +88,35 @@
   </header>
 
 
+
   <aside class="float-left">
     <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
       <ul class="tracker">
-        <li><a class="page-link tracker-link" href="#basic-usage">Basic Usage</a></li>
-
-        <li><a href="css.html">CSS</a></li>
-
-        <li><a href="utility.html">Utility Classes</a></li>
-
-        <li><a href="components.html">Components</a></li>
-
-        <li><a href="js.html">JavaScript</a></li>
-
-        <li><a href="swatch-book.html">Colors</a></li>
-
-        <li><a href="patterns.html">Patterns</a></li>
+        <li><a class="page-link tracker-link" href="#swatch-book">Colors</a></li>
       </ul>
     </nav>
   </aside>
 
 
 
-
-
   <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
-    <section id="basic-usage" class="tracker-section">
+    <section id="swatch-book" class="tracker-section">
       <header class="section-header">
-        <h1>Basic Usage</h1>
+        <h1>Colors</h1>
       </header>
 
-      <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
-      <p><strong>Example:</strong></p>
+      <ul class="swatch-book flex"></ul>
+      <script>
+        var colors = ['red','brown','orange','yellow','olive','yellow-green','green','aqua','teal','blue','denim','purple','magenta','pink','metal','gray'];
 
-      <pre><code class="lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    ...
-    &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    ...
-    &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-      </code></pre>
+        for(var color in colors){
+          $('.swatch-book').append('<li class="color-'+colors[color]+'"><ul></ul><p>'+colors[color]+'</p></li>')
+
+          for(var i=5;i<=100;i+=5){
+            $('.swatch-book .color-'+colors[color]+' ul').append('<li class="color-val-'+i+'"></li>');
+          }
+        }
+      </script>
     </section>
   </main>
 

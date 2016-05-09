@@ -4,10 +4,9 @@
 .d-inline {
   display: inline;
 }
-// 1. Fix for Firefox bug: an image styled `max-width:100%` within an inline-block will display at its default size, and not limit its width to 100% of an ancestral container.
-.d-inlineBlock {
+
+.d-inline-block {
   display: inline-block;
-  max-width: 100%;
 }
 
 
@@ -19,16 +18,16 @@
 .d-table {
   display: table;
 }
-.d-tableCell {
+.d-table-cell {
   display: table-cell;
 }
-.d-tableRow {
+.d-table-row {
   display: table-row;
 }
 
 
 // Completely remove from the flow but leave available to screen readers.
-.d-hiddenVisually {
+.d-hidden-visually {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
