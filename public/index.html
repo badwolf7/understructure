@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./assets/css/virgil.css">
 
   <style>
-    #grid-display .row div{
+    .grid-display .row div{
       box-shadow: inset 0 0 0 1px #584b54;
       text-align: center;
       padding-top: 40px;
@@ -18,7 +18,7 @@
       max-height: 109px;
       position: relative;
     }
-    #grid-display .row div:before{
+    .grid-display .row div:before{
       content: "";
       height: 100%;
       width: 0.5em;
@@ -28,7 +28,7 @@
       left: 0;
       z-index: -1;
     }
-    #grid-display .row div:after{
+    .grid-display .row div:after{
       content: "";
       height: 100%;
       width: 0.5em;
@@ -120,6 +120,7 @@
           <ul>
             <li><a class="page-link tracker-link" href="#util-display">Display</a></li>
             <li><a class="page-link tracker-link" href="#util-forms">Forms</a></li>
+            <li><a class="page-link tracker-link" href="#util-layout">Layout</a></li>
             <li><a class="page-link tracker-link" href="#util-position">Position</a></li>
             <li><a class="page-link tracker-link" href="#util-text">Text</a></li>
           </ul>
@@ -193,7 +194,7 @@
           <h2>Grid</h2>
         </header>
 
-        <section id="grid-display" class="tracker-section">
+        <section class="grid-display">
           <div class="row">
             <div class="xs-6 float-left">6</div>
             <div class="xs-6 float-left">6</div>
@@ -237,7 +238,7 @@
           <h2>Typography</h2>
         </header>
 
-        <section id="fonts" class="tracker-section">
+        <section>
           <header>
             <h3>Fonts</h3>
           </header>
@@ -249,7 +250,7 @@
           <p class="font-mono"><strong>$mono:</strong> monaco, Consolas, 'Lucida Console', monospace;</p>
         </section>
 
-        <section id="headings" class="tracker-section">
+        <section>
           <header>
             <h3>Headings</h3>
           </header>
@@ -263,7 +264,7 @@
           </div>
         </section>
 
-        <section id="copy" class="tracker-section">
+        <section>
           <h3>Body Copy</h3>
           <p>No, no there you go, no there you go. I just heard it come on.Nicer ambulances, faster response times and better looking drivers mean they're not just the Emergency Services, they're your Emergency Services.No, no there you go, no there you go. I just heard it come on.No, no, that's the music you heard when it come on.You know, it's high tide. But we're not on the coast. I'm closed for maintenance! Closed for maintenance? I've fallen to the communists! Well, they do have some strong arguments.I'll put this over here, with the rest of the fire.</p>
 
