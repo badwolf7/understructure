@@ -1,5 +1,7 @@
 .side-nav{
-  background: $snow;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   transition: width 0.4s ease, box-shadow 0.4s ease, margin 0.4s ease;
 
   >ul{
