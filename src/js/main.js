@@ -24,8 +24,24 @@ $(function(){
 
   ////////////////////////////// TRACKER
   //////////////////////////////////////
+  var trackerTop = $('.tracker').parent('nav').position().top;
+
   function tracker(){
     var scrollTop = $(window).scrollTop();
+
+
+    if(trackerTop > scrollTop + 75){
+      $('.tracker').parent('nav').css({
+        'position':'absolute',
+        'top':'initial'
+      });
+    }else{
+      $('.tracker').parent('nav').css({
+        'position':'fixed',
+        'top':'75px'
+      });
+    }
+
 
     $('.tracker-section').each(function(){
       var top = $(this).position().top;
