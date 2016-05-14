@@ -87,6 +87,12 @@ $btnW: 15rem;
 
 // Base Button Styles
 
+.download-wrap,
+.download-wrap *,
+.download-wrap *:before,
+.download-wrap *:after{
+  box-sizing: border-box;
+}
 .button,
 [class*='button-']{
   background: color('green',50);
@@ -106,22 +112,27 @@ $btnW: 15rem;
   }
 }
 
+
 // Download Button
 
 .download-wrap{
   perspective: 80rem;
   perspective-origin: 50% 50% 0;
-  width: $btnW; height: $btnH;
-  margin: 0 auto;
+  display: block;
+  padding: 7rem 0;
+  background: color('metal',85);
 }
 
 .download{
   position: relative;
-  width: $btnW; height: $btnH;
+  width: $btnW;
+  height: $btnH;
   transform-style: preserve-3d;
   transform-origin: 50% 50% 0;
   transform: rotateX(0deg);
   transition: 0.2s linear all;
+
+  margin: 0 auto;
 
   &.is-active{
     transform: rotateX(90deg) translateZ($btnH/2);
@@ -144,10 +155,12 @@ $btnW: 15rem;
 
 .icon-wrap{
   position: absolute;
-  right: 0.5rem; top: 0; bottom: 0;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
   width: $btnH;
-  padding-top: 1.66rem;
-  background: rgba(black, 0.1);
+  padding: 1.66rem 0.5rem 0;
+  background: rgba(color('green',95), 0.1);
 }
 
 .icon-download{
@@ -188,6 +201,7 @@ $btnW: 15rem;
     border-top: solid 0.5rem color('green',5);
   }
 }
+
 
 // Animations
 

@@ -111,6 +111,40 @@
       margin-bottom: 20px;
       min-width: 33%;
     }
+
+
+    .intro{
+      padding: 0;
+      margin-top: -25px;
+    }
+    .intro header{
+      background: #333;
+      display: block;
+      height: 250px;
+    }
+
+    .intro .img{
+      display: inline-block;
+      padding: 0;
+      width: 15em;
+      height: 250px;
+      background-image: url("http://a3.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTIwNjA4NjMzOTk5NDkyNjIw.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .intro-header-right{
+      display: inline-block;
+    }
+
+    .intro h1,
+    .intro p{
+      color: #a7dccd;
+    }
+
+
+    .container{
+      padding-top: 25px;
+    }
   </style>
 
   <!-- JavaScript -->
@@ -139,72 +173,84 @@
   </header>
 
 
-  <aside class="float-left">
-    <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
-      <ul class="tracker">
-        <li>
-          <a class="page-link tracker-link" href="#basic-usage">Basic Usage</a>
-          <ul>
-            <li><a class="page-link tracker-link" href="#download">Download</a></li>
-            <li><a class="page-link tracker-link" href="#usage">Usage</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </aside>
+
+  <section class="intro xs-12">
+    <header>
+      <div class="img float-left"></div>
+      <div class="intro-header-right float-left">
+        <h1>Welcome to Virgil</h1>
+      </div>
+    </header>
+  </section>
 
 
 
+  <div class="container clear-both">
+    <aside class="float-left">
+      <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
+        <ul class="tracker">
+          <li>
+            <a class="page-link tracker-link" href="#basic-usage">Basic Usage</a>
+            <ul>
+              <li><a class="page-link tracker-link" href="#download">Download</a></li>
+              <li><a class="page-link tracker-link" href="#usage">Usage</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
 
-  <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
-    <section id="basic-usage" class="tracker-section">
-      <header class="section-header">
-        <h1>Basic Usage</h1>
-      </header>
 
-      <section id="download" class="tracker-section">
-        <header>
-          <h2>Download</h2>
+    <main class="float-left md-8 md-offset-3 sm-10 sm-offset-1 xs-12">
+      <section id="basic-usage" class="tracker-section">
+        <header class="section-header">
+          <h1>Basic Usage</h1>
         </header>
 
-        <div class="download-wrap">
-          <div class="download">
-            <a href="#" class="button-download">
-              download
-              <span class="icon-wrap">
-                <i class="icon-download"></i>
-              </span>
-            </a>
+        <section id="download" class="tracker-section">
+          <header>
+            <h2>Download</h2>
+          </header>
+
+          <div class="download-wrap">
+            <div class="download">
+              <a href="#" class="button-download">
+                download
+                <span class="icon-wrap">
+                  <i class="icon-download"></i>
+                </span>
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
+
+
+        <section id="usage" class="tracker-section">
+          <header>
+            <h2>Usage</h2>
+          </header>
+
+          <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
+          <p><strong>Example:</strong></p>
+
+          <pre><code class="lang-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        ...
+        &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        ...
+        &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+          </code></pre>
+        </section>
       </section>
-
-
-      <section id="usage" class="tracker-section">
-        <header>
-          <h2>Usage</h2>
-        </header>
-
-        <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
-        <p><strong>Example:</strong></p>
-
-        <pre><code class="lang-html">
-  &lt;!DOCTYPE html&gt;
-  &lt;html&gt;
-    &lt;head&gt;
-      ...
-      &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      ...
-      &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-        </code></pre>
-      </section>
-    </section>
-  </main>
+    </main>
+  </div>
 
 
   <script src="./assets/js/virgil.min.js"></script>

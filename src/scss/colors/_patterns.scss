@@ -349,8 +349,8 @@
   &.stripes-diagonal{
     background:
       linear-gradient(45deg, color('blue',70) 25%,
-      color('orange',40) 25%, color('orange',40) 50%, 
-      color('blue',70) 50%, color('blue',70) 75%, 
+      color('orange',40) 25%, color('orange',40) 50%,
+      color('blue',70) 50%, color('blue',70) 75%,
       color('orange',40) 75%);
     background-size: 100px 100px;
   }
