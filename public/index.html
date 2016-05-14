@@ -142,19 +142,13 @@
   <aside class="float-left">
     <nav class="side-nav side-nav-fixed sm-hide-down md-3 sm-8 xs-12">
       <ul class="tracker">
-        <li><a class="page-link tracker-link" href="#basic-usage">Basic Usage</a></li>
-
-        <li><a href="css.html">CSS</a></li>
-
-        <li><a href="utility.html">Utility Classes</a></li>
-
-        <li><a href="components.html">Components</a></li>
-
-        <li><a href="js.html">JavaScript</a></li>
-
-        <li><a href="swatch-book.html">Colors</a></li>
-
-        <li><a href="patterns.html">Patterns</a></li>
+        <li>
+          <a class="page-link tracker-link" href="#basic-usage">Basic Usage</a>
+          <ul>
+            <li><a class="page-link tracker-link" href="#download">Download</a></li>
+            <li><a class="page-link tracker-link" href="#usage">Usage</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -169,22 +163,46 @@
         <h1>Basic Usage</h1>
       </header>
 
-      <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
-      <p><strong>Example:</strong></p>
+      <section id="download" class="tracker-section">
+        <header>
+          <h2>Download</h2>
+        </header>
 
-      <pre><code class="lang-html">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    ...
-    &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    ...
-    &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-      </code></pre>
+        <div class="download-wrap">
+          <div class="download">
+            <a href="#" class="button-download">
+              download
+              <span class="icon-wrap">
+                <i class="icon-download"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="usage" class="tracker-section">
+        <header>
+          <h2>Usage</h2>
+        </header>
+
+        <p>You will need to include the <code class="lang-none">virgil.min.css</code> and <code class="lang-none">virgil.min.js</code> files in your page.</p>
+        <p><strong>Example:</strong></p>
+
+        <pre><code class="lang-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      ...
+      &lt;link href="assets/css/virgil.min.css" rel="stylesheet" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      ...
+      &lt;script src="assets/js/virgil.min.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+        </code></pre>
+      </section>
     </section>
   </main>
 
