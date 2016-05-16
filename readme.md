@@ -2,11 +2,11 @@
 
 ## Contributors
 
-### Holly Springsteen
-[GitHub](https://github.com/badwolf7)
-[GHE](https://github.ibm.com/hspringsteen)
-[Website](http://hollyspringsteen.com)
-[Twitter](https://twitter.com/hollyos7)
+- **Holly Springsteen**
+    + [GitHub](https://github.com/badwolf7)
+    + [GHE](https://github.ibm.com/hspringsteen)
+    + [Website](http://hollyspringsteen.com)
+    + [Twitter](https://twitter.com/hollyos7)
 
 ## Synopsis
 
