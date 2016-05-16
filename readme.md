@@ -1,13 +1,5 @@
 # Virgil Framework
 
-## Contributors
-
-- **Holly Springsteen**
-    + [GitHub](https://github.com/badwolf7)
-    + [GHE](https://github.ibm.com/hspringsteen)
-    + [Website](http://hollyspringsteen.com)
-    + [Twitter](https://twitter.com/hollyos7)
-
 ## Synopsis
 
 At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
@@ -34,7 +26,11 @@ Describe and show how to run the tests with code examples.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+- **Holly Springsteen**
+    + [GitHub](https://github.com/badwolf7)
+    + [GHE](https://github.ibm.com/hspringsteen)
+    + [Website](http://hollyspringsteen.com)
+    + [Twitter](https://twitter.com/hollyos7)
 
 ## License
 
