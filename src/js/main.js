@@ -147,18 +147,21 @@ $(function(){
       // return sample size val
       return parseInt(ss+.5);
     },
-    sigma: function(max, min){
-      // only max is required
-      if(min === undefined || min === ''){
-        min = 1;
+    sigma: function(top, bottom){
+      // only top is required
+      if(bottom === undefined || bottom === '' || bottom === null){
+        bottom = 1;
+      }
+      if(top === undefined || top === '' || top === null){
+        return "must define a top value";
       }
 
       var sum = 0
 
-      for (var i = min; i <= max; i++) {
+      for (var i = bottom; i <= top; i++) {
         sum += i
 
-        if(i >= max){
+        if(i >= top){
           return sum;
         }
       }
