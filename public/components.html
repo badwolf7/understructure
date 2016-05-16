@@ -94,7 +94,14 @@
       <ul class="tracker">
         <li><a class="page-link tracker-link" href="#components">Components</a></li>
         <li><a class="page-link tracker-link" href="#buttons">Buttons</a></li>
-        <li><a class="page-link tracker-link" href="#tables">Tables</a></li>
+        <li>
+          <a class="page-link tracker-link" href="#tables">Tables</a>
+          <ul>
+            <li><a class="page-link tracker-link" href="#tables-default">Default Tables</a></li>
+            <li><a class="page-link tracker-link" href="#tables-striped">Striped Tables</a></li>
+            <li><a class="page-link tracker-link" href="#tables-hover">Row Hover Tables</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </aside>
@@ -151,8 +158,100 @@
           <h2>Tables</h2>
         </header>
 
-        <section>
-          <table class="xs-12">
+        <section id="tables-default" class="tracker-section">
+          <header>
+            <h3>Default</h3>
+          </header>
+
+          <pre><code class="lang-html">
+&lt;table class="fill"&gt;&lt;/table&gt;
+          </code></pre>
+
+          <table class="fill">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Smith</td>
+                <td>24</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>Jane Doe</td>
+                <td>36</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <td>Richard Huli</td>
+                <td>49</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>Piper Hanson</td>
+                <td>15</td>
+                <td>Female</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="tables-striped" class="tracker-section">
+          <header>
+            <h3>Striped Table</h3>
+          </header>
+
+          <pre><code class="lang-html">
+&lt;table class="fill table-striped"&gt;&lt;/table&gt;
+          </code></pre>
+
+          <table class="fill table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Smith</td>
+                <td>24</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>Jane Doe</td>
+                <td>36</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <td>Richard Huli</td>
+                <td>49</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td>Piper Hanson</td>
+                <td>15</td>
+                <td>Female</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="tables-hover" class="tracker-section">
+          <header>
+            <h3>Row Hover Table</h3>
+          </header>
+
+          <pre><code class="lang-html">
+&lt;table class="fill table-hover"&gt;&lt;/table&gt;
+          </code></pre>
+
+          <table class="fill table-hover">
             <thead>
               <tr>
                 <th>Name</th>

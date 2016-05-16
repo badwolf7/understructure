@@ -3,8 +3,20 @@ table{
 
   th,
   td{
-    padding: 3px 2%;
+    padding: 10px 2%;
     min-width: 50px;
+  }
+
+  tr{
+    td{
+      border-bottom: 1px solid color('metal',15);
+      transition: background 0.3s ease;
+    }
+    &:last-child{
+      td{
+        border-bottom: none;
+      }
+    }
   }
 
   .no-wrap{
@@ -58,6 +70,30 @@ table{
 
       &:first-child:before{
         top: 29px !important;
+      }
+    }
+  }
+}
+
+
+
+.table-striped{
+  tr{
+    &:nth-child(even){
+      td{
+        background: rgba(color('gray',5),0.5);
+      }
+    }
+  }
+}
+
+
+
+.table-hover{
+  tr{
+    &:hover{
+      td{
+        background: color('gray',5) !important;
       }
     }
   }
