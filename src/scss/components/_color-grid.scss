@@ -1,16 +1,19 @@
-.swatch-book{
-  > li{
-    padding: 0;
-    width: 6.25%;
-    > ul > li{
-      height: 50px;
-      min-width: 100px;
-    }
+#hollyos,
+#ibm{
+  .swatch-book{
+    > li{
+      padding: 0;
+      width: 5%;
+      > ul > li{
+        height: 50px;
+        min-width: 100px;
+      }
 
-    p{
-      transform: rotate(90deg);
-      white-space: nowrap;
-      margin-top: 30px;
+      p{
+        transform: rotate(90deg);
+        white-space: nowrap;
+        margin-top: 30px;
+      }
     }
   }
 }
@@ -18,7 +21,7 @@
 
 
 @each $color, $vals in $palette{
-  .color-#{$color}{
+  #hollyos .color-#{$color}{
     ul{
       @each $val, $hex in $vals{
         .color-val-#{$val} {
@@ -26,5 +29,28 @@
         }
       }
     }
+  }
+}
+
+
+@each $color, $vals in $palettes{
+  #ibm .color-#{$color}{
+    ul{
+      @each $val, $hex in $vals{
+        .color-val-#{$val} {
+          background: $hex;
+        }
+      }
+    }
+  }
+}
+
+
+@each $color, $vals in $socialColors{
+  #social .color-#{$color} div{
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+    background: $vals;
   }
 }
