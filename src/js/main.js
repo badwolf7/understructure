@@ -41,12 +41,12 @@ $(function(){
 
 
   var calc = {
-    confidenceInterval: function(conLev,ss,pop,perc){
+    "confidenceInterval": function(conLev,ss,pop,perc){
       // set value for confidence level
       conLev = conLevCheck(conLev);
       var conLevels = {
-        95: 3.8416,
-        99: 6.6564
+        "95": 3.8416,
+        "99": 6.6564
       }
       var conLevel = conLevels[conLev];
 
@@ -88,7 +88,7 @@ $(function(){
 
       return pf+conInt/100;
     },
-    npsScore: function(promoters,detractors,total){
+    "npsScore": function(promoters,detractors,total){
       // promoters (% / count)
       // detractors (% / count)
       // total (count)
@@ -111,12 +111,12 @@ $(function(){
         return pPerc - dPerc;
       }
     },
-    sampleSize: function(conLev,conInt,pop){
+    "sampleSize": function(conLev,conInt,pop){
       // set value for confidence level
       conLev = conLevCheck(conLev);
       var conLevels = {
-        95: 1.96,
-        99: 2.58
+        "95": 1.96,
+        "99": 2.58
       }
       var conLevel = conLevels[conLev];
 
@@ -147,7 +147,7 @@ $(function(){
       // return sample size val
       return parseInt(ss+.5);
     },
-    sigma: function(top, bottom){
+    "sigma": function(top, bottom){
       // only top is required
       if(bottom === undefined || bottom === '' || bottom === null){
         bottom = 1;
@@ -180,7 +180,7 @@ $(function(){
     var locTop = $(loc).offset().top;
 
     $('body').animate(
-      {scrollTop: locTop},
+      {"scrollTop": locTop},
       1000,
       'swing'
     );
